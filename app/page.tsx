@@ -1,8 +1,9 @@
+import Hero from "./componentes/hero";
 
 export default function Nara(){
   return (
     <>
-      <h1>Nara</h1>
+      <Hero />
     </>
   )
 }
