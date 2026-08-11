@@ -1,0 +1,28 @@
+<svg 
+                viewBox="0 0 200 200" 
+                className="" 
+                style={{ opacity: 0.12 }}
+                >
+                <line x1="50" y1="20" x2="20" y2="55" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="50" y1="20" x2="75" y2="50" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="50" y1="20" x2="85" y2="25" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="20" y1="55" x2="75" y2="50" stroke="#f5a623" strokeWidth="0.9" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="20" y1="55" x2="45" y2="80" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="20" y1="55" x2="10" y2="30" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="75" y1="50" x2="45" y2="80" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="75" y1="50" x2="60" y2="70" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="45" y1="80" x2="30" y2="85" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="85" y1="25" x2="90" y2="65" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="60" y1="70" x2="90" y2="65" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                <line x1="60" y1="70" x2="30" y2="85" stroke="#0a0a0a" strokeWidth="0.35" style={{ transition: 'stroke 0.6s, stroke-width 0.6s' }}></line>
+                
+                <circle cx="50" cy="20" r="2.4" fill="#f5a623" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="20" cy="55" r="1.5" fill="#f5a623" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="75" cy="50" r="1.5" fill="#f5a623" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="45" cy="80" r="1.5" fill="#0a0a0a" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="85" cy="25" r="1.5" fill="#0a0a0a" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="10" cy="30" r="1.5" fill="#0a0a0a" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="60" cy="70" r="1.5" fill="#0a0a0a" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="30" cy="85" r="1.5" fill="#0a0a0a" style={{ transition: 'fill 0.6s' }}></circle>
+                <circle cx="90" cy="65" r="1.5" fill="#0a0a0a" style={{ transition: 'fill 0.6s' }}></circle>
+            </svg>
