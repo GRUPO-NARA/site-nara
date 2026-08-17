@@ -1,6 +1,7 @@
 import Hero from "./componentes/hero";
 import Sobre from "./componentes/sobre";
 import Header from "./componentes/header"
+import Projetos from "./componentes/projetos";
 import Importancia from "./componentes/importancia";
 
 export default function Nara(){
@@ -10,6 +11,7 @@ export default function Nara(){
       <Hero />
       <Sobre />
       <Importancia />
+      <Projetos />
     </>
   )
 }
