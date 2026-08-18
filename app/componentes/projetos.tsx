@@ -4,12 +4,11 @@ import { useState } from "react";
 
 export default function Projetos() {
 
-    let projetos = [
+    const projetos = [
         {
             "tag" : "MACHINE LEARNING",
             "titulo" : "Analise Preditiva de Demanda",
             "descricao" : "O projeto de análise preditiva de demanda tem como objetivo utilizar técnicas de machine learning para prever a demanda futura de produtos ou serviços.",
-            "corCard" : "bg-white",
             "tecnologias" : ["Python", "Scikit-learn", "Pandas"],
             "maisDetalhes" : {
                 "foto" : "/projetos/images.jpg",
@@ -27,7 +26,6 @@ export default function Projetos() {
             "titulo" : "Plataforma de E-commerce",
             "descricao" : "O projeto de plataforma de e-commerce visa criar um ambiente online para a venda de produtos ou serviços. A plataforma permitirá que os usuários navegu",
             "tecnologias" : ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-            "corCard" : "bg-[#f8f8f8]",
             "maisDetalhes" : {
                 "foto" : "/projetos/preditiva.jpg",
                 "objetivo" : "O objetivo do projeto é criar uma plataforma de e-commerce completa, com funcionalidades para gerenciar produtos, pedidos e pagamentos.",
@@ -54,7 +52,6 @@ export default function Projetos() {
                 "linkGitHub" : "https://github.com/seu-usuario/projeto-dashboard",
                 "linkDemo" : "https://demo-projeto-dashboard.com",
             },
-            "corCard" : "bg-white",
             "linkGitHub" : "https://github.com/seu-usuario/projeto-dashboard",
             "linkDemo" : "https://demo-projeto-dashboard.com"
         },
@@ -63,7 +60,6 @@ export default function Projetos() {
             "titulo" : "Aplicativo de Monitoramento de Saúde",
             "descricao" : "O projeto de aplicativo de monitoramento de saúde tem como objetivo fornecer aos usuários uma ferramenta para acompanhar e gerenciar sua saúde e bem-estar. O aplicativo permitirá que os usuários registrem informações sobre atividades físicas, alimentação, sono e sinais vitais. Além disso, o aplicativo fornecerá lembretes personalizados, gráficos de progresso e recomendações baseadas em dados para ajudar os usuários a manter um estilo de vida saudável.",
             "tecnologias" : ["Flutter", "Dart", "Firebase", "SQLite", "REST API"],
-            "corCard" : "bg-[#f8f8f8]",
             "linkGitHub" : "https://github.com/seu-usuario/projeto-monitoramento-saude",
             "linkDemo" : "https://demo-projeto-monitoramento-saude.com",
             "maisDetalhes" : {
@@ -89,17 +85,17 @@ export default function Projetos() {
     }
     
     return (
-        <main id="projetos" className="flex justify-center items-center p-20">
+        <main id="projetos" className="flex items-center justify-center bg-[#f8f8f8] py-20 font-sans">
             <section className="text-gray-900 max-w-6xl w-full p-4">
                 <div className="flex flex-col gap-3">
                     <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ PROJETOS</p>
                     <h1 className="text-6xl md:text-5xl font-bold">O que estamos construindo</h1>
                 </div>
                 <section className="translate-y-10 md:translate-y-10">
-                    <article className="grid grid-cols-1 md:grid-cols-3 gap-10 col-span-2">
+                    <article className="col-span-2 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {
                             projetos.map((projeto, index) => (
-                                <div key={index} className={`flex flex-col gap-3 border border-gray-300 rounded-2xl hover:scale-105 transition-transform duration-300 ${projeto.corCard} overflow-hidden `}>
+                                <div key={index} className="flex flex-col gap-3 overflow-hidden rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white">
                                     <img src={projeto.maisDetalhes.foto} className="w-full h-[70%] object-cover" alt={projeto.titulo} />
                                     <article className="flex flex-col gap-3 p-4">
                                         <p className="bg-amber-50 w-fit p-2 rounded-2xl text-[#ffa928] font-semibold text-sm border border-amber-100">{projeto.tag}</p>

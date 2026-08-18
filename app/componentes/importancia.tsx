@@ -6,7 +6,7 @@ export default function Importancia(){
         informacao: string;
     }
 
-    let informacoes: Record<string, formatoDasInfos> = {
+    const informacoes: Record<string, formatoDasInfos> = {
         "Quadrado 1": {
             numeracao: "01",
             titulo: "Formação técnica avançada",
@@ -30,7 +30,7 @@ export default function Importancia(){
     }
 
     return(
-        <main id= "importancia" className="flex justify-center font-sans py-20 bg-[#f8f8f8]">
+        <main id= "importancia" className="flex justify-center bg-white py-20 font-sans">
             <section className="gap-20 md:gap-50 justify-center items-center max-w-6xl p-4">
                 <article className="flex flex-col items-center text-center gap-7 text-gray-900">
                     <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ IMPORTÂNCIA</p>

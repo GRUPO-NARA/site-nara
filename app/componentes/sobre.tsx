@@ -1,6 +1,6 @@
 export default function Sobre(){
 
-    let listagem: Record<string, string> = {
+    const listagem: Record<string, string> = {
         "Laboratório vinculado": "LEA — Laboratório de Engenharia Aplicada",
         "Instituição": "UEMA — Universidade Estadual do Maranhão",
         "Área principal": "Ciência de Dados & Engenharia de Software",
@@ -8,7 +8,7 @@ export default function Sobre(){
         "Projetos" : "2 ativos · 1 concluído · 1 planejado"
     }
 
-    let estatisticas: Record<string, string> = {
+    const estatisticas: Record<string, string> = {
         "Análises Realizadas": "20",
         "Clientes Atendidos": "3",
         "Projetos em Andamento": "2",
@@ -38,10 +38,10 @@ export default function Sobre(){
                     }
                 </article>
                 <article className="col-span-2 md:-translate-y-30">
-                    <section className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <section className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 md:grid-cols-4">
                         {
                             Object.entries(estatisticas).map(([chave, valor]) => (
-                                <div key={chave} className="flex flex-col items-center gap-2 bg-[#f8f8f8] py-4 border border-gray-300 rounded-2xl">
+                                <div key={chave} className="mx-1 flex flex-col items-center gap-4 rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white p-6">
                                     <h2 className="font-bold text-[#ffa928] text-lg">{valor}</h2>
                                     <p className="text-gray-500 text-[14px]">{chave}</p>
                                 </div>

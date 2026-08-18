@@ -46,17 +46,17 @@ export default function Membros(){
     ]
 
     return(
-        <main id="membros" className="flex justify-center bg-white py-20 font-sans scroll-mt-8">
+        <main id="membros" className="flex justify-center bg-[#f8f8f8] py-20 font-sans scroll-mt-8">
             <section className="flex flex-col gap-12 max-w-6xl w-full p-4">
                 <article className="flex flex-col gap-3 text-gray-900">
                     <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ MEMBROS</p>
                     <h1 className="text-5xl md:text-5xl font-bold">Conheça nossa equipe</h1>
                 </article>
 
-                <article className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {
                         membros.map((membro, index) => (
-                            <div key={index} className="border border-gray-300 rounded-lg overflow-hidden bg-white">
+                            <div key={index} className="overflow-hidden rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white">
                                 {
                                     membro.foto ? (
                                         <Image className="aspect-square w-full object-cover border-b border-gray-300"

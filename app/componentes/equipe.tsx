@@ -1,6 +1,6 @@
 export default function Equipe(){
     return(
-        <main id="equipe" className="flex justify-center bg-[#f8f8f8] py-20 font-sans">
+        <main id="equipe" className="flex justify-center bg-white py-20 font-sans">
             <section className="flex flex-col gap-16 max-w-6xl w-full p-4">
                 <article className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-end">
                     <div className="flex flex-col gap-3 text-gray-900">
