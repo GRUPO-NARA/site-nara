@@ -11,7 +11,7 @@ export default function Equipe(){
                 </article>
 
                 <article className="relative h-[360px] md:h-[520px] rounded-lg overflow-hidden">
-                    <img src="/equipe.jpeg" className="w-full h-full object-cover" alt="Equipe reunida em torno de um computador" />
+                    <img src="/equipe/equipe.jpeg" className="w-full h-full object-cover" alt="Equipe reunida em torno de um computador" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
 
                     <section className="absolute inset-x-0 bottom-0 flex flex-col gap-5 md:flex-row md:justify-between md:items-end p-6 md:p-10 text-white">

@@ -12,7 +12,7 @@ export default function Projetos() {
             "corCard" : "bg-white",
             "tecnologias" : ["Python", "Scikit-learn", "Pandas"],
             "maisDetalhes" : {
-                "foto" : "/images.jpg",
+                "foto" : "/projetos/images.jpg",
                 "objetivo" : "O objetivo do projeto é fornecer uma ferramenta que permita às empresas antecipar a demanda de seus produtos ou serviços, otimizando o planejamento e a alocação de recursos.",
                 "metodologia" : "A metodologia envolve a coleta de dados históricos de vendas, a limpeza e pré-processamento desses dados, a seleção de características relevantes e o treinamento de modelos de machine learning para prever a demanda futura.",
                 "resultadosEsperados" : "Espera-se que o modelo seja capaz de fornecer previsões precisas da demanda, permitindo que a empresa tome decisões mais informadas sobre estoque, produção e logística, resultando em maior eficiência operacional e redução de custos.",
@@ -29,7 +29,7 @@ export default function Projetos() {
             "tecnologias" : ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
             "corCard" : "bg-[#f8f8f8]",
             "maisDetalhes" : {
-                "foto" : "/preditiva.jpg",
+                "foto" : "/projetos/preditiva.jpg",
                 "objetivo" : "O objetivo do projeto é criar uma plataforma de e-commerce completa, com funcionalidades para gerenciar produtos, pedidos e pagamentos.",
                 "metodologia" : "A metodologia envolve a definição de requisitos, o design da interface do usuário, o desenvolvimento do backend e frontend, e a implementação de recursos de segurança e desempenho.",
                 "resultadosEsperados" : "Espera-se que a plataforma seja capaz de oferecer uma experiência de compra online segura e eficiente, com uma interface intuitiva e recursos avançados para os administradores.",
@@ -45,7 +45,7 @@ export default function Projetos() {
             "descricao" : "O projeto de dashboard interativo de análise de dados tem como objetivo fornecer uma interface visual para explorar e interpretar grandes volumes de dados. Através de gráficos, tabelas e filtros interativos, os usuários poderão identificar tendências, padrões e insights relevantes. O dashboard será projetado para ser intuitivo e responsivo, permitindo que os usuários personalizem a visualização dos dados de acordo com suas necessidades.",
             "tecnologias" : ["D3.js", "Plotly", "Tableau", "JavaScript", "HTML/CSS"],
             "maisDetalhes" : {
-                "foto" : "/saude.jpg",
+                "foto" : "/projetos/saude.jpg",
                 "objetivo" : "O objetivo do projeto é criar um dashboard interativo para visualizar dados de análise.",
                 "metodologia" : "A metodologia envolve a coleta e processamento de dados, o design da interface do usuário e a implementação da solução.",
                 "resultadosEsperados" : "Espera-se que o dashboard seja capaz de apresentar os dados de forma clara e intuitiva, permitindo que os usuários tomem decisões baseadas em informações confiáveis.",
@@ -67,7 +67,7 @@ export default function Projetos() {
             "linkGitHub" : "https://github.com/seu-usuario/projeto-monitoramento-saude",
             "linkDemo" : "https://demo-projeto-monitoramento-saude.com",
             "maisDetalhes" : {
-                "foto" : "/teste.webp",
+                "foto" : "/projetos/teste.webp",
                 "objetivo" : "O objetivo do projeto é criar um aplicativo de monitoramento de saúde que permita aos usuários acompanhar e gerenciar sua saúde e bem-estar.",
                 "metodologia" : "A metodologia envolve a definição de requisitos, o design da interface do usuário, o desenvolvimento do aplicativo e a implementação de recursos de segurança e desempenho.",
                 "resultadosEsperados" : "Espera-se que o aplicativo seja capaz de fornecer informações precisas e relevantes sobre a saúde dos usuários, ajudando-os a tomar decisões informadas sobre seu estilo de vida.",

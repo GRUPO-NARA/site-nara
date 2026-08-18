@@ -9,7 +9,7 @@ export default function Membros(){
             "projeto" : "Análise Preditiva de Demanda",
             "area" : "Machine Learning",
             "foto" : "/ana.jpg",
-            "posicaoFoto" : "50% 50%"
+            "posicaoFoto" : "100% 100%"
         },
         {
             "nome" : "Bruno Raphael Andrade Santos",
