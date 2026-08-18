@@ -4,46 +4,44 @@ export default function Membros(){
 
     const membros = [
         {
-            "nome" : "Ana Beatriz Sousa",
+            "nome" : "Ana Elisa Oliveira Silva",
             "cargo" : "COORDENADORA",
             "projeto" : "Análise Preditiva de Demanda",
             "area" : "Machine Learning",
-            "foto" : "/membros/ana-beatriz.jpg"
+            "foto" : "/ana.jpg",
+            "posicaoFoto" : "50% 50%"
         },
         {
-            "nome" : "Carlos Eduardo Lima",
+            "nome" : "Bruno Raphael Andrade Santos",
             "cargo" : "ENGENHEIRO DE DADOS",
             "projeto" : "Dashboard de Indicadores",
-            "area" : "Data Engineering",
-            "foto" : "/membros/carlos-eduardo.jpg" 
+            "area" : "Desenvolvimento Back-end",
+            "foto" : "/bruno.jpeg",
+            "posicaoFoto" : "50% 60%"
         },
         {
-            "nome" : "Fernanda Rocha",
+            "nome" : "Carlos Vinícius Rodrigues Amorim",
             "cargo" : "PESQUISADORA",
             "projeto" : "Mineração de Texto",
             "area" : "NLP & Linguagem",
-            "foto" : "/membros/fernanda-rocha.jpg"
+            "foto" : "/carlos.jpg",
+            "posicaoFoto" : "50% 70%"
         },
         {
-            "nome" : "João Pedro Martins",
-            "cargo" : "DESENVOLVEDOR BACKEND",
+            "nome" : "Júlio Cesar Costa da Silva",
+            "cargo" : "COORDENADOR",
             "projeto" : "Sistema de Monitoramento IoT",
             "area" : "APIs & Sistemas",
-            "foto" : "/membros/joao-pedro.jpg" 
+            "foto" : "/julio.jpeg",
+            "posicaoFoto" : "50% 50%"
         },
         {
-            "nome" : "Larissa Cunha",
+            "nome" : "Luca Maia Marques",
             "cargo" : "ANALISTA DE DADOS",
             "projeto" : "Visualização de Dados",
-            "area" : "Data Analytics",
-            "foto" : "/membros/larissa-cunha.jpg" 
-        },
-        {
-            "nome" : "Rafael Mendes",
-            "cargo" : "PESQUISADOR",
-            "projeto" : "Modelagem Estatística",
-            "area" : "Estatística",
-            "foto" : "/membros/rafael-mendes.jpg" 
+            "area" : "Analista de dados",
+            "foto" : "/luca.jpeg",
+            "posicaoFoto" : "50% 50%"
         }
     ]
 
@@ -61,7 +59,14 @@ export default function Membros(){
                             <div key={index} className="border border-gray-300 rounded-lg overflow-hidden bg-white">
                                 {
                                     membro.foto ? (
-                                        <Image src={membro.foto} width={600} height={400} className="w-full h-56 object-cover border-b border-gray-300" alt={`Foto de ${membro.nome}`} />
+                                        <Image className="aspect-square w-full object-cover border-b border-gray-300"
+                                            src={membro.foto}
+                                            width={600}
+                                            height={600}
+                                            sizes="(min-width: 1024px) 352px, (min-width: 640px) 50vw, 100vw"
+                                            style={{ objectPosition: membro.posicaoFoto }}
+                                            alt={`Foto de ${membro.nome}`}
+                                        />
                                     ) : (
                                         <div className="h-56 bg-gray-100 flex justify-center items-center border-b border-gray-300">
                                             <p className="text-gray-400 text-sm">Foto do membro</p>
