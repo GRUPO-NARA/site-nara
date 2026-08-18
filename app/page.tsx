@@ -4,6 +4,7 @@ import Header from "./componentes/header"
 import Projetos from "./componentes/projetos";
 import Importancia from "./componentes/importancia";
 import Equipe from "./componentes/equipe";
+import Membros from "./componentes/membros";
 
 export default function Nara(){
   return (
@@ -14,6 +15,7 @@ export default function Nara(){
       <Importancia />
       <Projetos />
       <Equipe />
+      <Membros />
     </>
   )
 }
