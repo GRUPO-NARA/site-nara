@@ -9,7 +9,7 @@ const links = [
     { href: "/importancia", label: "Importância" },
     { href: "/projetos", label: "Projetos" },
     { href: "/equipe", label: "Equipe"},
-    { href: "/contato", label: "Contato"}
+    { href: "#contato", label: "Contato"}
 ]
 
 export default function Header(){
@@ -26,7 +26,7 @@ export default function Header(){
                     <Link href="/importancia" className="text-gray-600 text-xl font-sans">Importância</Link>
                     <Link href="/projetos" className="text-gray-600 text-xl font-sans">Projetos</Link>
                     <Link href="/equipe" className="text-gray-600 text-xl font-sans">Equipe</Link>
-                    <Link href="/contato" className="rounded-sm px-5 py-2 bg-[#ffa928] text-white text-base font-sans font-bold">CONTATO</Link>
+                    <Link href="#contato" className="rounded-sm px-5 py-2 bg-[#ffa928] text-white text-base font-sans font-bold">CONTATO</Link>
                 </nav>            
             </div>
         </header>
