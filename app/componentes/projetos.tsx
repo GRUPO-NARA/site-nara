@@ -1,142 +1,223 @@
 "use client"
 
-import { useState } from "react";
+import Image from "next/image"
+import { useRef, useState } from "react"
 
-export default function Projetos() {
+const projetos = [
+    {
+        tag: "DADOS PÚBLICOS",
+        titulo: "Mapa Social do Maranhão",
+        descricao: "Plataforma web de código aberto que integra e visualiza indicadores sociais dos 217 municípios maranhenses para apoiar políticas públicas e ampliar o acesso à informação.",
+        imagem: "/projetos/mapasocial.jpeg",
+        tecnologias: ["Python", "PostgreSQL", "Spring Boot", "FastAPI", "Next.js", "Scikit-learn"],
+        destaque: "PIBITI/FAPEMA · 2026",
+        objetivo: "Integrar dados públicos de diferentes setores sociais em uma ferramenta interativa, acessível à população e capaz de apoiar a tomada de decisões de gestores públicos e do Ministério Público do Estado do Maranhão.",
+        metodologia: "Um pipeline assíncrono de ETL em Python e Pandas coleta e padroniza dados do SIDRA, SAGICAD, IMESC e IPEADATA. Os indicadores são armazenados em PostgreSQL, disponibilizados por uma API REST em Spring Boot e analisados por um serviço FastAPI com modelos de aprendizado de máquina. A interface foi desenvolvida em Next.js.",
+        resultados: "A plataforma consolidou 48 séries de indicadores, contempla os 217 municípios do Maranhão e permite consultar séries históricas, gerar projeções e agrupar municípios com perfis semelhantes. A coleta assíncrona reduziu o tempo observado de processamento de cerca de dez para aproximadamente dois minutos no ambiente do projeto.",
+        equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Carlos Vinícius Rodrigues Amorim, Julio Cesar Costa da Silva e Paulo Fernandes da Silva Junior.",
+        vinculo: "UEMA · LEA · PIBITI/FAPEMA · Ministério Público do Estado do Maranhão",
+    },
+    {
+        tag: "INTELIGÊNCIA ARTIFICIAL",
+        titulo: "VizuData: Decisões Inteligentes com Dados",
+        descricao: "Plataforma inteligente que transforma arquivos Excel e CSV em dashboards, análises automatizadas e insights em linguagem natural para usuários sem formação técnica.",
+        imagem: "/projetos/Vizudata.png",
+        tecnologias: ["Python", "Next.js", "Pandas", "NumPy", "Agentes de IA"],
+        destaque: "PROTÓTIPO · TRL 3–4",
+        objetivo: "Democratizar o acesso à análise de dados para micro e pequenas empresas, instituições públicas, organizações do terceiro setor e empreendedores que não possuem equipes técnicas especializadas.",
+        metodologia: "O usuário envia dados em formatos Excel ou CSV e seleciona análises descritivas, diagnósticas ou preditivas. O sistema processa os dados, gera gráficos, dashboards e indicadores e utiliza um agente de inteligência artificial para produzir interpretações e recomendações em linguagem natural.",
+        resultados: "A proposta prevê uma interface acessível, exportação de relatórios em PDF, uso individual ou corporativo e integração futura com sistemas externos. A solução está em validação conceitual e desenvolvimento de protótipo, com evolução planejada para um MVP funcional.",
+        equipe: "Carlos Vinícius Rodrigues Amorim, Julio Cesar Costa da Silva, Luca Maia Marques, Ana Elisa Oliveira Silva e Bruno Raphael Andrade Santos.",
+        vinculo: "UEMA · Synapse Lab · Laboratório de Engenharia Aplicada · Incubadora MARANDU",
+    },
+    {
+        tag: "EDUCAÇÃO FINANCEIRA",
+        titulo: "Sistema de Educação Financeira no Maranhão",
+        descricao: "Sistema para mapear endividamento, vulnerabilidade financeira e indicadores socioeconômicos, transformando dados pesquisados em estátistica e aprendizado.",
+        imagem: "/projetos/financeira.png",
+        imagemContida: true,
+        tecnologias: ["ETL", "PostgreSQL", "React", "Business Intelligence", "Machine Learning"],
+        destaque: "PESQUISA",
+        objetivo: "Desenvolver um sistema de análise de dados sobre educação financeira no Estado do Maranhão, realizando pesquisa em tempo real, avaliando e comparando o nível de conhecimento por meio de um sistema de TRI e adição de dicas de para a melhoria do conhecimento na área de educação financeira",
+        metodologia: "A pesquisa combina ciclos de desenvolvimento de software com um pipeline de extração, transformação e carga de bases públicas e institucionais. A arquitetura prevê banco de dados relacional, back-end seguro, front-end analítico, dashboards e técnicas descritivas, preditivas e de agrupamento.",
+        resultados: "Espera-se produzir um protótipo funcional para acompanhar indicadores de endividamento e consumo, apoiar a alocação de recursos em programas de capacitação financeira e monitorar o impacto de políticas implementadas no território maranhense.",
+        vinculo: "UEMA · Programa Institucional de Bolsas de Iniciação Científica · ODS 4, 8, 9 e 10",
+        equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Carlos Vinícius Rodrigues Amorim, Julio Cesar Costa da Silva"
+    },
+    {
+        tag: "ANÁLISE DE DADOS",
+        titulo: "Analfabetismo nos Municípios do Maranhão",
+        descricao: "Estudo dos indicadores de analfabetismo entre 1991 e 2022, com visualizações comparativas e dashboard interativo para identificar padrões e diferenças regionais.",
+        imagem: "/projetos/sead.jpeg",
+        tecnologias: ["Python", "Pandas", "Matplotlib", "Seaborn", "Streamlit"],
+        destaque: "SEAD UFMA · 2025",
+        objetivo: "Analisar a evolução das taxas de analfabetismo nos municípios maranhenses e organizar os dados de forma que pesquisadores e gestores possam reconhecer tendências regionais e apoiar a formulação de políticas educacionais.",
+        metodologia: "Os dados da plataforma IPEADATA foram limpos, organizados e processados em Python com Pandas. Matplotlib e Seaborn foram utilizados nas análises estatísticas e visualizações, enquanto o Streamlit permitiu disponibilizar os resultados em um dashboard interativo.",
+        resultados: "O estudo evidenciou a redução do analfabetismo no período analisado, além de diferenças relevantes entre municípios. O tratamento dos dados e as visualizações formaram uma base consistente para novas análises e para o acompanhamento de indicadores sociais.",
+        equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Samyra de Araujo Lobo Silva e Júlio César Costa da Silva.",
+        vinculo: "UEMA · Trabalho apresentado na 18ª Semana Acadêmica de Administração da UFMA",
+    },
+]
 
-    const projetos = [
-        {
-            "tag" : "MACHINE LEARNING",
-            "titulo" : "Analise Preditiva de Demanda",
-            "descricao" : "O projeto de análise preditiva de demanda tem como objetivo utilizar técnicas de machine learning para prever a demanda futura de produtos ou serviços.",
-            "tecnologias" : ["Python", "Scikit-learn", "Pandas"],
-            "maisDetalhes" : {
-                "foto" : "/projetos/images.jpg",
-                "objetivo" : "O objetivo do projeto é fornecer uma ferramenta que permita às empresas antecipar a demanda de seus produtos ou serviços, otimizando o planejamento e a alocação de recursos.",
-                "metodologia" : "A metodologia envolve a coleta de dados históricos de vendas, a limpeza e pré-processamento desses dados, a seleção de características relevantes e o treinamento de modelos de machine learning para prever a demanda futura.",
-                "resultadosEsperados" : "Espera-se que o modelo seja capaz de fornecer previsões precisas da demanda, permitindo que a empresa tome decisões mais informadas sobre estoque, produção e logística, resultando em maior eficiência operacional e redução de custos.",
-                "parcerias" : ["Empresa X", "Instituição Y"],
-                "proximosPassos" : "Os próximos passos incluem a implementação do modelo em um ambiente de produção, a integração com sistemas de gestão da empresa e a realização de testes contínuos para melhorar a precisão das previsões.",
-                "linkGitHub" : "https://github.com/seu-usuario/projeto-analise-preditiva",
-                "linkDemo" : "https://demo-projeto-analise-preditiva.com",
-            }
-        },
-        {
-            "tag" : "WEB DEVELOPMENT",
-            "titulo" : "Plataforma de E-commerce",
-            "descricao" : "O projeto de plataforma de e-commerce visa criar um ambiente online para a venda de produtos ou serviços. A plataforma permitirá que os usuários navegu",
-            "tecnologias" : ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-            "maisDetalhes" : {
-                "foto" : "/projetos/preditiva.jpg",
-                "objetivo" : "O objetivo do projeto é criar uma plataforma de e-commerce completa, com funcionalidades para gerenciar produtos, pedidos e pagamentos.",
-                "metodologia" : "A metodologia envolve a definição de requisitos, o design da interface do usuário, o desenvolvimento do backend e frontend, e a implementação de recursos de segurança e desempenho.",
-                "resultadosEsperados" : "Espera-se que a plataforma seja capaz de oferecer uma experiência de compra online segura e eficiente, com uma interface intuitiva e recursos avançados para os administradores.",
-                "parcerias" : ["Empresa X", "Instituição Y"],
-                "proximosPassos" : "Os próximos passos incluem a implementação da plataforma em um ambiente de produção, a integração com sistemas de pagamento e logística, e a realização de testes contínuos para garantir a qualidade do serviço.",
-                "linkGitHub" : "https://github.com/seu-usuario/projeto-e-commerce",
-                "linkDemo" : "https://demo-projeto-e-commerce.com",
-            }
-        },
-        {
-            "tag" : "DATA VISUALIZATION",
-            "titulo" : "Dashboard Interativo de Análise de Dados",
-            "descricao" : "O projeto de dashboard interativo de análise de dados tem como objetivo fornecer uma interface visual para explorar e interpretar grandes volumes de dados. Através de gráficos, tabelas e filtros interativos, os usuários poderão identificar tendências, padrões e insights relevantes. O dashboard será projetado para ser intuitivo e responsivo, permitindo que os usuários personalizem a visualização dos dados de acordo com suas necessidades.",
-            "tecnologias" : ["D3.js", "Plotly", "Tableau", "JavaScript", "HTML/CSS"],
-            "maisDetalhes" : {
-                "foto" : "/projetos/saude.jpg",
-                "objetivo" : "O objetivo do projeto é criar um dashboard interativo para visualizar dados de análise.",
-                "metodologia" : "A metodologia envolve a coleta e processamento de dados, o design da interface do usuário e a implementação da solução.",
-                "resultadosEsperados" : "Espera-se que o dashboard seja capaz de apresentar os dados de forma clara e intuitiva, permitindo que os usuários tomem decisões baseadas em informações confiáveis.",
-                "parcerias" : ["Empresa X", "Instituição Y"],
-                "proximosPassos" : "Os próximos passos incluem a implementação do dashboard em um ambiente de produção, a integração com fontes de dados existentes e a realização de testes contínuos para garantir a qualidade do serviço.",
-                "linkGitHub" : "https://github.com/seu-usuario/projeto-dashboard",
-                "linkDemo" : "https://demo-projeto-dashboard.com",
-            },
-            "linkGitHub" : "https://github.com/seu-usuario/projeto-dashboard",
-            "linkDemo" : "https://demo-projeto-dashboard.com"
-        },
-        {
-            "tag" : "MOBILE DEVELOPMENT",
-            "titulo" : "Aplicativo de Monitoramento de Saúde",
-            "descricao" : "O projeto de aplicativo de monitoramento de saúde tem como objetivo fornecer aos usuários uma ferramenta para acompanhar e gerenciar sua saúde e bem-estar. O aplicativo permitirá que os usuários registrem informações sobre atividades físicas, alimentação, sono e sinais vitais. Além disso, o aplicativo fornecerá lembretes personalizados, gráficos de progresso e recomendações baseadas em dados para ajudar os usuários a manter um estilo de vida saudável.",
-            "tecnologias" : ["Flutter", "Dart", "Firebase", "SQLite", "REST API"],
-            "linkGitHub" : "https://github.com/seu-usuario/projeto-monitoramento-saude",
-            "linkDemo" : "https://demo-projeto-monitoramento-saude.com",
-            "maisDetalhes" : {
-                "foto" : "/projetos/teste.webp",
-                "objetivo" : "O objetivo do projeto é criar um aplicativo de monitoramento de saúde que permita aos usuários acompanhar e gerenciar sua saúde e bem-estar.",
-                "metodologia" : "A metodologia envolve a definição de requisitos, o design da interface do usuário, o desenvolvimento do aplicativo e a implementação de recursos de segurança e desempenho.",
-                "resultadosEsperados" : "Espera-se que o aplicativo seja capaz de fornecer informações precisas e relevantes sobre a saúde dos usuários, ajudando-os a tomar decisões informadas sobre seu estilo de vida.",
-                "parcerias" : ["Empresa X", "Instituição Y"],
-                "proximosPassos" : "Os próximos passos incluem a implementação do aplicativo em um ambiente de produção, a integração com dispositivos de monitoramento de saúde e a realização de testes contínuos para garantir a qualidade do serviço.",
-                "linkGitHub" : "https://github.com/seu-usuario/projeto-monitoramento-saude",
-                "linkDemo" : "https://demo-projeto-monitoramento-saude.com"
-            }
+export default function Projetos(){
+    const [projetoSelecionado, setProjetoSelecionado] = useState<number | null>(null)
+    const [detalhesVisiveis, setDetalhesVisiveis] = useState(false)
+    const temporizadorFechamento = useRef<number | null>(null)
+
+    const projetoAberto = projetoSelecionado !== null ? projetos[projetoSelecionado] : null
+
+    function abrirDetalhes(index: number){
+        if(temporizadorFechamento.current !== null){
+            window.clearTimeout(temporizadorFechamento.current)
         }
-    ]
 
-
-    const [isBotaoMaisDetalhesClicado, setIsBotaoMaisDetalhesClicado] = useState(false);
-    const [indexProjetoSelecionado, setIndexProjetoSelecionado] = useState<number | null>(null);
-
-    function handleMaisDetalhesClick(index: number) {
-        setIsBotaoMaisDetalhesClicado(!isBotaoMaisDetalhesClicado);
-        setIndexProjetoSelecionado(index);
+        setProjetoSelecionado(index)
+        requestAnimationFrame(() => setDetalhesVisiveis(true))
     }
-    
-    return (
-        <main id="projetos" className="flex items-center justify-center bg-[#f8f8f8] py-20 font-sans">
-            <section className="text-gray-900 max-w-6xl w-full p-4">
-                <div className="flex flex-col gap-3">
-                    <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ PROJETOS</p>
-                    <h1 className="text-6xl md:text-5xl font-bold">O que estamos construindo</h1>
-                </div>
-                <section className="translate-y-10 md:translate-y-10">
-                    <article className="col-span-2 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        {
-                            projetos.map((projeto, index) => (
-                                <div key={index} className="flex flex-col gap-3 overflow-hidden rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white">
-                                    <img src={projeto.maisDetalhes.foto} className="w-full h-[70%] object-cover" alt={projeto.titulo} />
-                                    <article className="flex flex-col gap-3 p-4">
-                                        <p className="bg-amber-50 w-fit p-2 rounded-2xl text-[#ffa928] font-semibold text-sm border border-amber-100">{projeto.tag}</p>
-                                        <h1 className="text-xl font-bold">{projeto.titulo}</h1>
-                                        <p className="text-gray-700">{projeto.descricao}</p>
-                                        <div className="w-full h-0.5 bg-gray-100 rounded"></div>
-                                        <article className="flex justify-between items-center">
-                                            {
-                                                projeto.tecnologias && (
-                                                    <div className="flex flex-wrap gap-2">
-                                                        {
-                                                            projeto.tecnologias.map((tecnologia, index) => (
-                                                                <p key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded-lg text-sm">{tecnologia}</p>
-                                                            ))
-                                                        }
-                                                    </div>
-                                                )
-                                            }
-                                            <button onClick={handleMaisDetalhesClick.bind(null, index)} className="bg-[#ffa928] text-white whitespace-nowrap p-1 rounded">Mais detalhes</button>
-                                        </article>
-                                        
-                                        
-                                    </article>
 
+    function fecharDetalhes(){
+        setDetalhesVisiveis(false)
+
+        if(temporizadorFechamento.current !== null){
+            window.clearTimeout(temporizadorFechamento.current)
+        }
+
+        temporizadorFechamento.current = window.setTimeout(() => {
+            setProjetoSelecionado(null)
+            temporizadorFechamento.current = null
+        }, 300)
+    }
+
+    return(
+        <main id="projetos" className="flex items-center justify-center bg-[#f8f8f8] py-20 font-sans">
+            <section className="w-full max-w-6xl p-4 text-gray-900">
+                <div className="flex flex-col gap-3">
+                    <p className="py-2 text-sm font-bold text-[#ffa928] md:py-0">/ PROJETOS</p>
+                    <h1 className="text-5xl font-bold md:text-6xl">O que estamos construindo</h1>
+                    <p className="max-w-3xl text-lg leading-8 text-gray-600">
+                        Pesquisa aplicada, desenvolvimento tecnológico e análise de dados voltados aos desafios sociais e econômicos do Maranhão.
+                    </p>
+                </div>
+
+                <article className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    {projetos.map((projeto, index) => (
+                        <div key={projeto.titulo} className="flex h-full flex-col overflow-hidden rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white">
+                            <div className="relative h-56 overflow-hidden bg-white">
+                                <Image
+                                    src={projeto.imagem}
+                                    fill
+                                    sizes="(min-width: 640px) 50vw, 100vw"
+                                    alt={`Imagem do projeto ${projeto.titulo}`}
+                                    className={projeto.imagemContida ? "object-contain p-10" : "object-contain p-4"}
+                                />
+                            </div>
+
+                            <div className="flex flex-1 flex-col gap-4 p-6">
+                                <div className="flex flex-wrap items-center justify-between gap-3">
+                                    <p className="w-fit rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-[#d88710]">{projeto.tag}</p>
+                                    <p className="text-xs font-bold tracking-wide text-gray-400">{projeto.destaque}</p>
                                 </div>
-                            ))
-                        }
-                    </article>
-                </section>
-                {
-                    isBotaoMaisDetalhesClicado && indexProjetoSelecionado !== null && (
-                        <section className="fixed bg-black w-150 h-screen right-0 top-0 z-50 flex flex-col overflow-hidden">
-                            <img src={projetos[indexProjetoSelecionado].maisDetalhes.foto} alt={projetos[indexProjetoSelecionado].titulo} />
-                            <nav className="flex justify-between absolute top-0 left-0 w-full p-4 text-white translate-y-2">
-                                <h1>{projetos[indexProjetoSelecionado].titulo}</h1>
-                                <button onClick={handleMaisDetalhesClick.bind(null, indexProjetoSelecionado)} className="">Fechar</button>
-                            </nav>
-                        </section>
-                    )
-                }
+
+                                <div className="flex flex-col gap-2">
+                                    <h2 className="text-2xl font-bold text-gray-900">{projeto.titulo}</h2>
+                                    <p className="leading-7 text-gray-600">{projeto.descricao}</p>
+                                </div>
+
+                                <div className="mt-auto flex flex-wrap gap-2 pt-2">
+                                    {projeto.tecnologias.slice(0, 4).map((tecnologia) => (
+                                        <span key={tecnologia} className="rounded-sm bg-gray-100 px-2.5 py-1 text-xs text-gray-600">{tecnologia}</span>
+                                    ))}
+                                </div>
+
+                                <button
+                                    type="button"
+                                    onClick={() => abrirDetalhes(index)}
+                                    className="mt-2 w-fit rounded-sm bg-[#ffa928] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-[#e99820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+                                >
+                                    VER DETALHES
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </article>
             </section>
+
+            {projetoAberto && (
+                <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-labelledby="titulo-projeto-aberto">
+                    <button
+                        type="button"
+                        aria-label="Fechar detalhes do projeto"
+                        onClick={fecharDetalhes}
+                        className={`absolute inset-0 bg-black/55 transition-opacity duration-300 ${detalhesVisiveis ? "opacity-100" : "opacity-0"}`}
+                    />
+
+                    <aside className={`relative z-10 h-full w-full max-w-2xl overflow-y-auto bg-white shadow-2xl transition-transform duration-300 ease-out ${detalhesVisiveis ? "translate-x-0" : "translate-x-full"}`}>
+                        <div className="relative h-64 bg-white sm:h-80">
+                            <Image
+                                src={projetoAberto.imagem}
+                                fill
+                                sizes="(min-width: 640px) 672px, 100vw"
+                                alt={`Imagem do projeto ${projetoAberto.titulo}`}
+                                className={projetoAberto.imagemContida ? "object-contain p-12" : "object-contain p-6"}
+                            />
+                            <button
+                                type="button"
+                                onClick={fecharDetalhes}
+                                className="absolute right-4 top-4 rounded-sm bg-white px-4 py-2 text-sm font-bold text-gray-900 shadow-md transition-colors hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+                            >
+                                FECHAR
+                            </button>
+                        </div>
+
+                        <div className="flex flex-col gap-8 p-6 sm:p-10">
+                            <header className="flex flex-col gap-3">
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <p className="w-fit rounded-full border border-amber-100 bg-amber-50 px-3 py-1.5 text-xs font-semibold text-[#d88710]">{projetoAberto.tag}</p>
+                                    <p className="text-xs font-bold tracking-wide text-gray-400">{projetoAberto.destaque}</p>
+                                </div>
+                                <h2 id="titulo-projeto-aberto" className="text-3xl font-bold leading-tight text-gray-900">{projetoAberto.titulo}</h2>
+                                <p className="leading-7 text-gray-600">{projetoAberto.descricao}</p>
+                            </header>
+
+                            <section className="flex flex-col gap-2 border-l-3 border-[#ffa928] pl-5">
+                                <h3 className="text-xs font-bold tracking-wider text-gray-400">OBJETIVO</h3>
+                                <p className="leading-7 text-gray-700">{projetoAberto.objetivo}</p>
+                            </section>
+
+                            <section className="flex flex-col gap-2 border-l-3 border-[#ffa928] pl-5">
+                                <h3 className="text-xs font-bold tracking-wider text-gray-400">METODOLOGIA</h3>
+                                <p className="leading-7 text-gray-700">{projetoAberto.metodologia}</p>
+                            </section>
+
+                            <section className="flex flex-col gap-2 border-l-3 border-[#ffa928] pl-5">
+                                <h3 className="text-xs font-bold tracking-wider text-gray-400">RESULTADOS E IMPACTO</h3>
+                                <p className="leading-7 text-gray-700">{projetoAberto.resultados}</p>
+                            </section>
+
+                            {projetoAberto.equipe && (
+                                <section className="flex flex-col gap-2">
+                                    <h3 className="text-xs font-bold tracking-wider text-gray-400">EQUIPE</h3>
+                                    <p className="leading-7 text-gray-700">{projetoAberto.equipe}</p>
+                                </section>
+                            )}
+
+                            <section className="flex flex-col gap-3">
+                                <h3 className="text-xs font-bold tracking-wider text-gray-400">TECNOLOGIAS E MÉTODOS</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {projetoAberto.tecnologias.map((tecnologia) => (
+                                        <span key={tecnologia} className="rounded-sm bg-gray-100 px-3 py-1.5 text-sm text-gray-600">{tecnologia}</span>
+                                    ))}
+                                </div>
+                            </section>
+
+                            <section className="rounded-sm bg-[#f8f8f8] p-5">
+                                <h3 className="text-xs font-bold tracking-wider text-gray-400">VÍNCULO</h3>
+                                <p className="mt-2 text-sm leading-6 text-gray-700">{projetoAberto.vinculo}</p>
+                            </section>
+                        </div>
+                    </aside>
+                </div>
+            )}
         </main>
     )
 }
