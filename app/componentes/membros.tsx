@@ -8,7 +8,7 @@ export default function Membros(){
             "cargo" : "PESQUISADORA E DESENVOLVEDORA",
             "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
             "area" : "Analista de Dados e Desenvolvimento Full Stack",
-            "foto" : "/ana.jpg",
+            "foto" : "/equipe/ana.jpg",
             "posicaoFoto" : "100% 100%"
         },
         {
@@ -16,7 +16,7 @@ export default function Membros(){
             "cargo" : "PESQUISADOR E DESENVOLVEDOR",
             "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
             "area" : "Analista de Dados e Desenvolvimento Back-end",
-            "foto" : "/bruno.jpeg",
+            "foto" : "/equipe/bruno.jpeg",
             "posicaoFoto" : "50% 60%"
         },
         {
@@ -24,7 +24,7 @@ export default function Membros(){
             "cargo" : "PESQUISADOR E DESENVOLVEDOR",
             "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
             "area" : "Analista de Dados e Desenvolvimento Full Stack",
-            "foto" : "/carlos.jpg",
+            "foto" : "/equipe/carlos.jpg",
             "posicaoFoto" : "50% 70%"
         },
         {
@@ -32,7 +32,7 @@ export default function Membros(){
             "cargo" : "PESQUISADOR E DESENVOLVEDOR",
             "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
             "area" : "Analista de Dados e Desenvolvimento Full Stack",
-            "foto" : "/julio.jpeg",
+            "foto" : "/equipe/julio.jpeg",
             "posicaoFoto" : "50% 50%"
         },
         {
@@ -40,7 +40,7 @@ export default function Membros(){
             "cargo" : "ANALISTA DE DADOS",
             "projetos" : ["VizuData: Decisões Inteligentes com Dados"],
             "area" : "Analista de Dados",
-            "foto" : "/luca.jpeg",
+            "foto" : "/equipe/luca.jpeg",
             "posicaoFoto" : "50% 50%"
         }
     ]
