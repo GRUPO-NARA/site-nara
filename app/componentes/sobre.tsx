@@ -9,10 +9,10 @@ export default function Sobre(){
     }
 
     const estatisticas: Record<string, string> = {
-        "Análises Realizadas": "20",
-        "Clientes Atendidos": "3",
-        "Projetos em Andamento": "2",
-        "Anos de Experiência": "2"
+        "Análises Realizadas": "10",
+        "Clientes Atendidos": "5",
+        "Projetos em Andamento": "3",
+        "Anos de Experiência": "1"
     }
     
     return (
@@ -41,7 +41,7 @@ export default function Sobre(){
                     <section className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 md:grid-cols-4">
                         {
                             Object.entries(estatisticas).map(([chave, valor]) => (
-                                <div key={chave} className="mx-1 flex flex-col items-center gap-4 rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white p-6">
+                                <div key={chave} className="mx-1 flex flex-col items-center gap-4 rounded-sm border border-gray-200 bg-white p-6">
                                     <h2 className="font-bold text-[#ffa928] text-lg">{valor}</h2>
                                     <p className="text-gray-500 text-[14px]">{chave}</p>
                                 </div>

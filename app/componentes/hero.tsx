@@ -179,7 +179,12 @@ export default function Hero() {
         </article>
         
         <nav className="flex gap-5 items-center">
-          <a className="bg-[#ffa928] p-3 text-white rounded font-sans font-bold hover:cursor-pointer">Ver Projetos</a>
+          <a
+            href="#projetos"
+            className="rounded-sm bg-[#ffa928] p-3 font-sans font-bold text-white transition-colors hover:bg-[#e99820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+          >
+            Ver Projetos
+          </a>
           <a className="p-3 font-sans font-bold border border-gray-300 rounded hover:cursor-pointer" onClick={() => irParaSecao('sobre')}>Sobre o NARA</a>
         </nav>
       </section>

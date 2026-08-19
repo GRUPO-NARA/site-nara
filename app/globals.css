@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}

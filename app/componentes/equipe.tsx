@@ -19,7 +19,7 @@ export default function Equipe(){
                             <p className="text-xs font-bold tracking-[0.16em]">NARA · LEA · UEMA</p>
                             <h2 className="text-xl md:text-2xl font-bold">Núcleo de Análise e Recursos Analíticos</h2>
                         </div>
-                        <a href="#membros" className="bg-[#ffa928] px-5 py-3 rounded text-sm font-bold w-fit whitespace-nowrap hover:bg-[#e99820] transition-colors">6 pesquisadores</a>
+                        <a href="#membros" className="bg-[#ffa928] px-5 py-3 rounded text-sm font-bold w-fit whitespace-nowrap hover:bg-[#e99820] transition-colors">5 pesquisadores</a>
                     </section>
                 </article>
             </section>

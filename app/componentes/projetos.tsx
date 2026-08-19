@@ -54,7 +54,7 @@ const projetos = [
         objetivo: "Analisar a evolução das taxas de analfabetismo nos municípios maranhenses e organizar os dados de forma que pesquisadores e gestores possam reconhecer tendências regionais e apoiar a formulação de políticas educacionais.",
         metodologia: "Os dados da plataforma IPEADATA foram limpos, organizados e processados em Python com Pandas. Matplotlib e Seaborn foram utilizados nas análises estatísticas e visualizações, enquanto o Streamlit permitiu disponibilizar os resultados em um dashboard interativo.",
         resultados: "O estudo evidenciou a redução do analfabetismo no período analisado, além de diferenças relevantes entre municípios. O tratamento dos dados e as visualizações formaram uma base consistente para novas análises e para o acompanhamento de indicadores sociais.",
-        equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Samyra de Araujo Lobo Silva e Júlio César Costa da Silva.",
+        equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Samyra de Araujo Lobo Silva, Júlio César Costa da Silva e Carlos Vinícius Rodrigues Amorim.",
         vinculo: "UEMA · Trabalho apresentado na 18ª Semana Acadêmica de Administração da UFMA",
     },
 ]
@@ -101,7 +101,7 @@ export default function Projetos(){
 
                 <article className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {projetos.map((projeto, index) => (
-                        <div key={projeto.titulo} className="flex h-full flex-col overflow-hidden rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white">
+                        <div key={projeto.titulo} className="flex h-full flex-col overflow-hidden rounded-sm border border-gray-200 bg-white">
                             <div className="relative h-56 overflow-hidden bg-white">
                                 <Image
                                     src={projeto.imagem}

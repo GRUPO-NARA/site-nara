@@ -5,41 +5,41 @@ export default function Membros(){
     const membros = [
         {
             "nome" : "Ana Elisa Oliveira Silva",
-            "cargo" : "COORDENADORA",
-            "projeto" : "Análise Preditiva de Demanda",
-            "area" : "Machine Learning",
+            "cargo" : "PESQUISADORA E DESENVOLVEDORA",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
+            "area" : "Analista de Dados e Desenvolvimento Full Stack",
             "foto" : "/ana.jpg",
             "posicaoFoto" : "100% 100%"
         },
         {
             "nome" : "Bruno Raphael Andrade Santos",
-            "cargo" : "ENGENHEIRO DE DADOS",
-            "projeto" : "Dashboard de Indicadores",
-            "area" : "Desenvolvimento Back-end",
+            "cargo" : "PESQUISADOR E DESENVOLVEDOR",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
+            "area" : "Analista de Dados e Desenvolvimento Back-end",
             "foto" : "/bruno.jpeg",
             "posicaoFoto" : "50% 60%"
         },
         {
             "nome" : "Carlos Vinícius Rodrigues Amorim",
-            "cargo" : "PESQUISADORA",
-            "projeto" : "Mineração de Texto",
-            "area" : "NLP & Linguagem",
+            "cargo" : "PESQUISADOR E DESENVOLVEDOR",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
+            "area" : "Analista de Dados e Desenvolvimento Full Stack",
             "foto" : "/carlos.jpg",
             "posicaoFoto" : "50% 70%"
         },
         {
             "nome" : "Júlio Cesar Costa da Silva",
-            "cargo" : "COORDENADOR",
-            "projeto" : "Sistema de Monitoramento IoT",
-            "area" : "APIs & Sistemas",
+            "cargo" : "PESQUISADOR E DESENVOLVEDOR",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
+            "area" : "Analista de Dados e Desenvolvimento Full Stack",
             "foto" : "/julio.jpeg",
             "posicaoFoto" : "50% 50%"
         },
         {
             "nome" : "Luca Maia Marques",
             "cargo" : "ANALISTA DE DADOS",
-            "projeto" : "Visualização de Dados",
-            "area" : "Analista de dados",
+            "projetos" : ["VizuData: Decisões Inteligentes com Dados"],
+            "area" : "Analista de Dados",
             "foto" : "/luca.jpeg",
             "posicaoFoto" : "50% 50%"
         }
@@ -56,7 +56,7 @@ export default function Membros(){
                 <article className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {
                         membros.map((membro, index) => (
-                            <div key={index} className="overflow-hidden rounded-sm border border-b-2 border-gray-200 border-b-[#ffa928] bg-white">
+                            <div key={index} className="overflow-hidden rounded-sm border border-gray-200 bg-white">
                                 {
                                     membro.foto ? (
                                         <Image className="aspect-square w-full object-cover border-b border-gray-300"
@@ -80,8 +80,15 @@ export default function Membros(){
                                     </div>
                                     <div className="h-px bg-gray-200"></div>
                                     <div className="flex flex-col gap-2">
-                                        <p className="text-gray-400 text-xs font-bold tracking-wider">PROJETO</p>
-                                        <p className="text-gray-900 text-sm">{membro.projeto}</p>
+                                        <p className="text-gray-400 text-xs font-bold tracking-wider">PROJETOS</p>
+                                        <ul className="flex flex-col gap-1.5">
+                                            {membro.projetos.map((projeto) => (
+                                                <li key={projeto} className="flex items-start gap-2 text-sm leading-5 text-gray-900">
+                                                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffa928]" aria-hidden="true" />
+                                                    <span>{projeto}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                         <p className="border border-[#ffa928] text-[#d88710] px-3 py-1.5 rounded-full text-xs font-semibold w-fit">{membro.area}</p>
                                     </div>
                                 </section>
