@@ -1,5 +1,5 @@
 const informacoes = [
-    { titulo: "EMAIL", descricao: "nara@lea.uema.br" },
+    { titulo: "EMAIL", descricao: "nara.nucleo@gmail.com" },
     { titulo: "LABORATÓRIO", descricao: "LEA · UEMA · São Luís, MA" },
     { titulo: "CURSO", descricao: "Engenharia da Computação" },
 ]

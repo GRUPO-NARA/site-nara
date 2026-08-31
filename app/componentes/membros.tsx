@@ -4,6 +4,14 @@ export default function Membros(){
 
     const membros = [
         {
+            "nome" : "Júlio César Costa da Silva",
+            "cargo" : "PESQUISADOR, DESENVOLVEDOR E GESTOR DO GRUPO",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
+            "area" : "Analista de Dados e Desenvolvimento Full Stack",
+            "foto" : "/equipe/julio.jpeg",
+            "posicaoFoto" : "50% 50%"
+        },
+        {
             "nome" : "Ana Elisa Oliveira Silva",
             "cargo" : "PESQUISADORA E DESENVOLVEDORA",
             "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
@@ -26,14 +34,6 @@ export default function Membros(){
             "area" : "Analista de Dados e Desenvolvimento Full Stack",
             "foto" : "/equipe/carlos.jpg",
             "posicaoFoto" : "50% 70%"
-        },
-        {
-            "nome" : "Júlio Cesar Costa da Silva",
-            "cargo" : "PESQUISADOR E DESENVOLVEDOR",
-            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
-            "area" : "Analista de Dados e Desenvolvimento Full Stack",
-            "foto" : "/equipe/julio.jpeg",
-            "posicaoFoto" : "50% 50%"
         },
         {
             "nome" : "Luca Maia Marques",
