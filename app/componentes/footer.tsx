@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
 const redesSociais = [
-    { nome: "LinkedIn", href: "", icone: "/logo/linkedin.svg" },
-    { nome: "GitHub", href: "", icone: "/logo/github.svg" },
-    { nome: "Instagram", href: "", icone: "/logo/instagram.svg" },
+    { nome: "LinkedIn", href: "https://www.linkedin.com/company/nucleonara/", icone: "/logo/linkedin.svg" },
+    { nome: "GitHub", href: "https://github.com/GRUPO-NARA", icone: "/logo/github.svg" },
+    { nome: "Instagram", href: "https://www.instagram.com/nara.uema/", icone: "/logo/instagram.svg" },
 ]
 
 export default function Footer(){
