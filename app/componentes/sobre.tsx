@@ -10,8 +10,8 @@ export default function Sobre(){
 
     const estatisticas: Record<string, string> = {
         "Análises Realizadas": "10",
-        "Clientes Atendidos": "5",
-        "Projetos em Andamento": "3",
+        "Clientes Atendidos": "7",
+        "Projetos em Andamento": "5",
         "Anos de Experiência": "1"
     }
     

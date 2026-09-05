@@ -37,7 +37,7 @@ const projetos = [
         imagem: "/projetos/financeira.png",
         imagemContida: true,
         tecnologias: ["ETL", "PostgreSQL", "React", "Business Intelligence", "Machine Learning"],
-        destaque: "PESQUISA",
+        destaque: "PESQUISA · 2026",
         objetivo: "Desenvolver um sistema de análise de dados sobre educação financeira no Estado do Maranhão, realizando pesquisa em tempo real, avaliando e comparando o nível de conhecimento por meio de um sistema de TRI e adição de dicas de para a melhoria do conhecimento na área de educação financeira",
         metodologia: "A pesquisa combina ciclos de desenvolvimento de software com um pipeline de extração, transformação e carga de bases públicas e institucionais. A arquitetura prevê banco de dados relacional, back-end seguro, front-end analítico, dashboards e técnicas descritivas, preditivas e de agrupamento.",
         resultados: "Espera-se produzir um protótipo funcional para acompanhar indicadores de endividamento e consumo, apoiar a alocação de recursos em programas de capacitação financeira e monitorar o impacto de políticas implementadas no território maranhense.",
@@ -57,6 +57,45 @@ const projetos = [
         equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Samyra de Araujo Lobo Silva, Júlio César Costa da Silva e Carlos Vinícius Rodrigues Amorim.",
         vinculo: "UEMA · Trabalho apresentado na 18ª Semana Acadêmica de Administração da UFMA",
     },
+    {
+        tag: "SOLUÇÕES SOCIAIS",
+        titulo: "Projeto Ciência Animal",
+        descricao: "Sistema que permite mapear e avaliar o bem-estar animal, a qualidade da carne e ter o controle sobre o abate do animal.",
+        imagem: "/projetos/cienca.jpeg",
+        tecnologias: ["PostgreSQL", "Spring Boot", "Django", "Angular", "Scikit-learn", "Expo"],
+        destaque: "PPGPDSA · 2026",
+        objetivo: "esenvolver e validar uma ferramenta digital baseada em indicadores técnico-científicos e normativos para avaliação e classificação automatizada do nível de bem-estar de bovinos durante o transporte, desembarque, manejo pré-abate e abate.",
+        metodologia: "A tecnologia está sendo desenvolvida e planejada em duas etapas, o controle e qualificação por meio de um sistema web e a coleta de informações por um aplicativo mobile desenvolvido em Expo.",
+        resultados: "O sistema fornecerá suporte a diversos tipos de abatedouros e para empresas de açougue para melhor acesso aos dados no processo de abatimento.",
+        equipe: "Ana Elisa Oliveira Silva, Bruno Raphael Andrade Santos, Carlos Vinícius Rodrigues Amorim, Julio Cesar Costa da Silva, Pedro Fernandes Chagas de Oliveira, André Henrique Calaça Dias, Gilberto Ramos Costa Filho e Paulo Fernandes da Silva Junior.",
+        vinculo: "UEMA · LEA · Progama de Pós-Graduação Profissional · Defesa Sanitária Animal",
+    },
+    {
+        tag: "GESTÃO ACADÊMICA & SAAS",
+        titulo: "Sistema de Gestão Acadêmica de Curso de Formação Profissional",
+        descricao: "Sistema que é responsável por fazer a gestão do desempenho do estudante, o progresso do curso e outros.",
+        imagem: "/projetos/formacaoprofissional.jpeg",
+        tecnologias: ["PostgreSQL", "Django", "Next.Js", "Pandas"], 
+        destaque: "B2B · SAAS · 2026",
+        objetivo: "Desenvolver e validar uma plataforma LMS (Learning Management System) customizada para gerenciar o ciclo completo de alunos em cursos de formação profissional, otimizando o controle de frequência, avaliações e a conformidade com as diretrizes de ensino.",
+        metodologia: "A solução foi dividida em duas frentes: uma plataforma web administrativa para a secretaria e instrutores gerenciarem turmas e notas, e um aplicativo mobile em Expo para os alunos acompanharem cronogramas, materiais didáticos e frequência.",
+        resultados: "O sistema automatiza o processo de secretaria escolar, reduz o tempo de emissão de certificados e fornece relatórios em tempo real sobre o desempenho dos alunos.",
+        equipe: "Carlos Vinícius Rodrigues Amorim, Julio Cesar Costa da Silva, Luca Maia Marques, Ana Elisa Oliveira Silva e Bruno Raphael Andrade Santos.",
+        vinculo: "NARA · Centro de Formação"
+    },
+    {
+        tag: "FOODTECH & SAAS",
+        titulo: "MesaSync",
+        descricao: "Plataforma SaaS integrada para gestão de restaurantes, cobrindo desde o controle de pedidos e ponto de venda (PDV) até a gestão inteligente de estoque e previsão de insumos.",
+        imagem: "/projetos/mesasync.jpeg",
+        tecnologias: ["PostgreSQL", "Spring Boot", "Angular", "FastAPI", "Scikit-learn"],
+        destaque: "B2B · SAAS · 2026",
+        objetivo: "Desenvolver uma solução comercial escalável que automatize a operação de restaurantes, otimizando o fluxo de pedidos em tempo real e aplicando modelos preditivos para evitar o desperdício de ingredientes e a falta de estoque.",
+        metodologia: "O ecossistema foi projetado em três frentes: uma API robusta de microsserviços, um painel web administrativo em Angular para gerentes controlarem o financeiro e o estoque, e um aplicativo mobile em Expo voltado para o atendimento de mesa e garçons. O módulo de inteligência utiliza Django e Scikit-learn para analisar o histórico de vendas e prever a demanda futura de ingredientes.",
+        resultados: "O sistema proporciona uma redução de até 25% no desperdício de insumos perecíveis, agiliza o tempo de atendimento dos pedidos e oferece aos proprietários relatórios preditivos para compras mais assertivas com fornecedores.",
+        equipe: "Carlos Vinícius Rodrigues Amorim, Julio Cesar Costa da Silva, Luca Maia Marques, Ana Elisa Oliveira Silva e Bruno Raphael Andrade Santos.",
+        vinculo: "NARA"
+    }
 ]
 
 export default function Projetos(){

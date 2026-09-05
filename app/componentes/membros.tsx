@@ -6,43 +6,68 @@ export default function Membros(){
         {
             "nome" : "Júlio César Costa da Silva",
             "cargo" : "PESQUISADOR, DESENVOLVEDOR E GESTOR DO GRUPO",
-            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
-            "area" : "Analista de Dados e Desenvolvimento Full Stack",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Sistema de Educação Financeira no Maranhão", "Analfabetismo nos Municípios do Maranhão", "Projeto Ciência Animal", "Sistema de Gestão Acadêmica de Curso de Formação Profissional", "MesaSync"],
+            "area" : "Gestão de Projetos, Análise de Dados e Desenvolvimento Full Stack",
             "foto" : "/equipe/julio.jpeg",
             "posicaoFoto" : "50% 50%"
         },
         {
             "nome" : "Ana Elisa Oliveira Silva",
             "cargo" : "PESQUISADORA E DESENVOLVEDORA",
-            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
-            "area" : "Analista de Dados e Desenvolvimento Full Stack",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Sistema de Educação Financeira no Maranhão", "Analfabetismo nos Municípios do Maranhão", "Projeto Ciência Animal", "Sistema de Gestão Acadêmica de Curso de Formação Profissional", "MesaSync"],
+            "area" : "Desenvolvimento Full Stack",
             "foto" : "/equipe/ana.jpg",
             "posicaoFoto" : "100% 100%"
         },
         {
             "nome" : "Bruno Raphael Andrade Santos",
             "cargo" : "PESQUISADOR E DESENVOLVEDOR",
-            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
-            "area" : "Analista de Dados e Desenvolvimento Back-end",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Sistema de Educação Financeira no Maranhão", "Analfabetismo nos Municípios do Maranhão", "Projeto Ciência Animal", "Sistema de Gestão Acadêmica de Curso de Formação Profissional", "MesaSync"],
+            "area" : "Análise de Dados e Desenvolvimento Back-end",
             "foto" : "/equipe/bruno.jpeg",
             "posicaoFoto" : "50% 60%"
         },
         {
             "nome" : "Carlos Vinícius Rodrigues Amorim",
             "cargo" : "PESQUISADOR E DESENVOLVEDOR",
-            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Analfabetismo nos Municípios do Maranhão"],
-            "area" : "Analista de Dados e Desenvolvimento Full Stack",
+            "projetos" : ["Mapa Social do Maranhão", "VizuData: Decisões Inteligentes com Dados", "Sistema de Educação Financeira no Maranhão", "Analfabetismo nos Municípios do Maranhão", "Projeto Ciência Animal", "Sistema de Gestão Acadêmica de Curso de Formação Profissional", "MesaSync"],
+            "area" : "Análise de Dados e Desenvolvimento Front-end",
             "foto" : "/equipe/carlos.jpg",
             "posicaoFoto" : "50% 70%"
         },
         {
             "nome" : "Luca Maia Marques",
             "cargo" : "ANALISTA DE DADOS",
-            "projetos" : ["VizuData: Decisões Inteligentes com Dados"],
-            "area" : "Analista de Dados",
+            "projetos" : ["VizuData: Decisões Inteligentes com Dados", "Sistema de Gestão Acadêmica de Curso de Formação Profissional", "MesaSync"],
+            "area" : "Análise de Dados",
             "foto" : "/equipe/luca.jpeg",
             "posicaoFoto" : "50% 50%"
-        }
+        },
+        {
+            "nome" : "Pedro Fernandes Chagas de Oliveira",
+            "cargo" : "ESPECIALISTA EM CIBERSEGURANÇA",
+            "projetos" : ["Projeto Ciência Animal"],
+            "area" : "Cibersegurança",
+            "foto" : "/equipe/pedro.jpeg",
+            "posicaoFoto" : "50% 50%"
+        },
+        {
+            "nome" : "André Henrique Calaça Dias",
+            "cargo" : "PESQUISADOR",
+            "projetos" : ["Projeto Ciência Animal"],
+            "area" : "Análise de Dados",
+            "foto" : "/equipe/andre.jpeg",
+            "posicaoFoto" : "50% 50%"
+        },
+        {
+            "nome" : "Gilberto Ramos Costa Filho",
+            "cargo" : "PESQUISADOR",
+            "projetos" : ["Projeto Ciência Animal"],
+            "area" : "Analista de Dados",
+            "foto" : "/equipe/gilberto.jpeg",
+            "posicaoFoto" : "50% 65%"
+        },
+        
     ]
 
     return(
