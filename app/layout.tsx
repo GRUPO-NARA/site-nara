@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "NARA",
-  description: "NARA - Núcleo de Análise de Dados e Recursos Análiticos",
+  description: "NARA - Núcleo de Análise e Recursos Analíticos",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

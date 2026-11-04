@@ -1,20 +1,28 @@
-export default function Sobre(){
+import type { Contadores, Laboratorio } from "../lib/dados"
+
+type Props = {
+    laboratorio: Laboratorio
+    contadores: Contadores
+    resumoProjetos: string
+}
+
+export default function Sobre({ laboratorio, contadores, resumoProjetos }: Props){
 
     const listagem: Record<string, string> = {
-        "Laboratório vinculado": "LEA — Laboratório de Engenharia Aplicada",
-        "Instituição": "UEMA — Universidade Estadual do Maranhão",
-        "Área principal": "Ciência de Dados & Engenharia de Software",
-        "Membros ativos": "6 discentes de Eng. da Computação",
-        "Projetos" : "2 ativos · 1 concluído · 1 planejado"
+        "Laboratório vinculado": laboratorio.laboratorio,
+        "Instituição": laboratorio.instituicao,
+        "Área principal": laboratorio.area_principal,
+        "Membros ativos": `${contadores.membros_ativos} discentes de Eng. da Computação`,
+        "Projetos" : resumoProjetos,
     }
 
     const estatisticas: Record<string, string> = {
-        "Análises Realizadas": "10",
-        "Clientes Atendidos": "5",
-        "Projetos em Andamento": "3",
-        "Anos de Experiência": "1"
+        "Análises Realizadas": String(laboratorio.estatisticas.analises_realizadas),
+        "Clientes Atendidos": String(laboratorio.estatisticas.clientes_atendidos),
+        "Projetos em Andamento": String(contadores.projetos_andamento + contadores.pesquisas_andamento),
+        "Anos de Experiência": String(laboratorio.estatisticas.anos_de_experiencia),
     }
-    
+
     return (
         <main id="sobre" className="flex justify-center border border-gray-300 bg-[#f8f8f8] py-20 font-sans animate-fade-in-up animate-duration-1000 animate-fill-mode-both">
             <section className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-50 justify-center items-center max-w-6xl p-4">
@@ -48,7 +56,7 @@ export default function Sobre(){
                             ))
                         }
                     </section>
-                    
+
                 </article>
             </section>
         </main>
