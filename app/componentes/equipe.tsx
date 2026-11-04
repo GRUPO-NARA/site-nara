@@ -1,4 +1,10 @@
-export default function Equipe(){
+type Props = {
+    nome: string
+    sigla: string
+    totalMembros: number
+}
+
+export default function Equipe({ nome, sigla, totalMembros }: Props){
     return(
         <main id="equipe" className="flex justify-center bg-white py-20 font-sans">
             <section className="flex flex-col gap-16 max-w-6xl w-full p-4">
@@ -16,10 +22,10 @@ export default function Equipe(){
 
                     <section className="absolute inset-x-0 bottom-0 flex flex-col gap-5 md:flex-row md:justify-between md:items-end p-6 md:p-10 text-white">
                         <div className="flex flex-col gap-2">
-                            <p className="text-xs font-bold tracking-[0.16em]">NARA · LEA · UEMA</p>
-                            <h2 className="text-xl md:text-2xl font-bold">Núcleo de Análise e Recursos Analíticos</h2>
+                            <p className="text-xs font-bold tracking-[0.16em]">{sigla} · LEA · UEMA</p>
+                            <h2 className="text-xl md:text-2xl font-bold">{nome}</h2>
                         </div>
-                        <a href="#membros" className="bg-[#ffa928] px-5 py-3 rounded text-sm font-bold w-fit whitespace-nowrap hover:bg-[#e99820] transition-colors">5 pesquisadores</a>
+                        <a href="#membros" className="bg-[#ffa928] px-5 py-3 rounded text-sm font-bold w-fit whitespace-nowrap hover:bg-[#e99820] transition-colors">{totalMembros} pesquisadores</a>
                     </section>
                 </article>
             </section>

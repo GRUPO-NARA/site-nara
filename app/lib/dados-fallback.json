@@ -1,0 +1,384 @@
+{
+  "laboratorio": {
+    "sigla": "NARA",
+    "nome": "Núcleo de Análise e Recursos Analíticos",
+    "slogan": "Sempre em busca de informações...",
+    "laboratorio": "LEA — Laboratório de Engenharia Aplicada",
+    "instituicao": "UEMA — Universidade Estadual do Maranhão",
+    "curso": "Engenharia da Computação",
+    "cidade": "São Luís, MA",
+    "fundacao": 2025,
+    "area_principal": "Ciência de Dados & Engenharia de Software",
+    "email": "nara.nucleo@gmail.com",
+    "estatisticas": {
+      "analises_realizadas": 10,
+      "clientes_atendidos": 5,
+      "anos_de_experiencia": 1
+    },
+    "links": {
+      "site": "https://site-nara-rho.vercel.app/",
+      "handbook": "https://handbook.nucleonara.tech",
+      "github": "https://github.com/GRUPO-NARA",
+      "roadmap": "https://github.com/orgs/GRUPO-NARA/projects",
+      "linkedin": "https://www.linkedin.com/company/nucleonara/",
+      "instagram": "https://www.instagram.com/nara.uema/"
+    }
+  },
+  "contadores": {
+    "membros_ativos": 7,
+    "em_nivelamento": 0,
+    "projetos_andamento": 2,
+    "projetos_planejados": 1,
+    "projetos_concluidos": 0,
+    "pesquisas_andamento": 0,
+    "pesquisas_planejadas": 1,
+    "pesquisas_concluidas": 1
+  },
+  "membros": [
+    {
+      "id": "julio",
+      "nome": "Júlio César Costa da Silva",
+      "funcao": "Pesquisador, desenvolvedor e gestor do grupo",
+      "perfil": "Analista de Dados e Desenvolvimento Full Stack",
+      "area": "fullstack",
+      "status": "ativo",
+      "github": "CapJul",
+      "linkedin": null,
+      "foto": "equipe/julio.jpeg",
+      "posicao_foto": "50% 50%",
+      "projetos": [
+        "mapa-social",
+        "vizudata",
+        "educacao-financeira"
+      ],
+      "pesquisas": [
+        "analfabetismo"
+      ],
+      "projetos_nomes": [
+        "Mapa Social do Maranhão",
+        "VizuData: Decisões Inteligentes com Dados",
+        "Sistema de Educação Financeira no Maranhão",
+        "Analfabetismo nos Municípios do Maranhão"
+      ]
+    },
+    {
+      "id": "ana-elisa",
+      "nome": "Ana Elisa Oliveira Silva",
+      "funcao": "Pesquisadora e desenvolvedora",
+      "perfil": "Analista de Dados e Desenvolvimento Full Stack",
+      "area": "fullstack",
+      "status": "ativo",
+      "github": null,
+      "linkedin": null,
+      "foto": "equipe/ana.jpg",
+      "posicao_foto": "100% 100%",
+      "projetos": [
+        "mapa-social",
+        "vizudata",
+        "educacao-financeira"
+      ],
+      "pesquisas": [
+        "analfabetismo"
+      ],
+      "projetos_nomes": [
+        "Mapa Social do Maranhão",
+        "VizuData: Decisões Inteligentes com Dados",
+        "Sistema de Educação Financeira no Maranhão",
+        "Analfabetismo nos Municípios do Maranhão"
+      ]
+    },
+    {
+      "id": "bruno",
+      "nome": "Bruno Raphael Andrade Santos",
+      "funcao": "Pesquisador e desenvolvedor",
+      "perfil": "Analista de Dados e Desenvolvimento Back-end",
+      "area": "backend",
+      "status": "ativo",
+      "github": null,
+      "linkedin": null,
+      "foto": "equipe/bruno.jpeg",
+      "posicao_foto": "50% 60%",
+      "projetos": [
+        "mapa-social",
+        "vizudata",
+        "educacao-financeira"
+      ],
+      "pesquisas": [
+        "analfabetismo"
+      ],
+      "projetos_nomes": [
+        "Mapa Social do Maranhão",
+        "VizuData: Decisões Inteligentes com Dados",
+        "Sistema de Educação Financeira no Maranhão",
+        "Analfabetismo nos Municípios do Maranhão"
+      ]
+    },
+    {
+      "id": "carlos",
+      "nome": "Carlos Vinícius Rodrigues Amorim",
+      "funcao": "Pesquisador e desenvolvedor",
+      "perfil": "Analista de Dados e Desenvolvimento Full Stack",
+      "area": "fullstack",
+      "status": "ativo",
+      "github": null,
+      "linkedin": null,
+      "foto": "equipe/carlos.jpg",
+      "posicao_foto": "50% 70%",
+      "projetos": [
+        "mapa-social",
+        "vizudata",
+        "educacao-financeira"
+      ],
+      "pesquisas": [
+        "analfabetismo"
+      ],
+      "projetos_nomes": [
+        "Mapa Social do Maranhão",
+        "VizuData: Decisões Inteligentes com Dados",
+        "Sistema de Educação Financeira no Maranhão",
+        "Analfabetismo nos Municípios do Maranhão"
+      ]
+    },
+    {
+      "id": "luca",
+      "nome": "Luca Maia Marques",
+      "funcao": "Analista de dados",
+      "perfil": "Analista de Dados",
+      "area": "dados",
+      "status": "ativo",
+      "github": null,
+      "linkedin": null,
+      "foto": "equipe/luca.jpeg",
+      "posicao_foto": "50% 50%",
+      "projetos": [
+        "vizudata"
+      ],
+      "pesquisas": [],
+      "projetos_nomes": [
+        "VizuData: Decisões Inteligentes com Dados"
+      ]
+    },
+    {
+      "id": "gilberto",
+      "nome": "Gilberto",
+      "funcao": null,
+      "perfil": null,
+      "area": null,
+      "status": "ativo",
+      "github": null,
+      "linkedin": null,
+      "foto": null,
+      "posicao_foto": null,
+      "projetos": [],
+      "pesquisas": [],
+      "projetos_nomes": []
+    },
+    {
+      "id": "andre",
+      "nome": "André",
+      "funcao": null,
+      "perfil": null,
+      "area": null,
+      "status": "ativo",
+      "github": null,
+      "linkedin": null,
+      "foto": null,
+      "posicao_foto": null,
+      "projetos": [],
+      "pesquisas": [],
+      "projetos_nomes": []
+    }
+  ],
+  "projetos": [
+    {
+      "id": "mapa-social",
+      "nome": "Mapa Social do Maranhão",
+      "categoria": "Dados públicos",
+      "status": "em-andamento",
+      "destaque": "PIBITI/FAPEMA · 2026",
+      "descricao": "Plataforma web de código aberto que integra e visualiza indicadores sociais dos 217 municípios maranhenses para apoiar políticas públicas e ampliar o acesso à informação.",
+      "objetivo": "Integrar dados públicos de diferentes setores sociais em uma ferramenta interativa, acessível à população e capaz de apoiar a tomada de decisões de gestores públicos e do Ministério Público do Estado do Maranhão.",
+      "metodologia": "Um pipeline assíncrono de ETL em Python e Pandas coleta e padroniza dados do SIDRA, SAGICAD, IMESC e IPEADATA. Os indicadores são armazenados em PostgreSQL, disponibilizados por uma API REST em Spring Boot e analisados por um serviço FastAPI com modelos de aprendizado de máquina. A interface foi desenvolvida em Next.js.",
+      "resultados": "A plataforma consolidou 48 séries de indicadores, contempla os 217 municípios do Maranhão e permite consultar séries históricas, gerar projeções e agrupar municípios com perfis semelhantes. A coleta assíncrona reduziu o tempo observado de processamento de cerca de dez para aproximadamente dois minutos no ambiente do projeto.",
+      "vinculo": "UEMA · LEA · PIBITI/FAPEMA · Ministério Público do Estado do Maranhão",
+      "parceiro": "Ministério Público do Maranhão (MPMA)",
+      "financiamento": "PIBITI/FAPEMA",
+      "inicio": 2026,
+      "stack": [
+        "Python",
+        "PostgreSQL",
+        "Spring Boot",
+        "FastAPI",
+        "Next.js",
+        "Scikit-learn"
+      ],
+      "responsavel": "julio",
+      "colaboradores": [
+        "Paulo Fernandes da Silva Junior"
+      ],
+      "repositorio": "mapa-social-do-maranhao",
+      "url": "https://mapasocialma.nucleonara.tech/",
+      "imagem": "projetos/mapasocial.jpeg",
+      "imagem_contida": false,
+      "equipe": [
+        "Júlio César Costa da Silva",
+        "Ana Elisa Oliveira Silva",
+        "Bruno Raphael Andrade Santos",
+        "Carlos Vinícius Rodrigues Amorim",
+        "Paulo Fernandes da Silva Junior"
+      ]
+    },
+    {
+      "id": "vizudata",
+      "nome": "VizuData: Decisões Inteligentes com Dados",
+      "categoria": "Inteligência artificial",
+      "status": "em-andamento",
+      "destaque": "PROTÓTIPO · TRL 3–4",
+      "descricao": "Plataforma inteligente que transforma arquivos Excel e CSV em dashboards, análises automatizadas e insights em linguagem natural para usuários sem formação técnica.",
+      "objetivo": "Democratizar o acesso à análise de dados para micro e pequenas empresas, instituições públicas, organizações do terceiro setor e empreendedores que não possuem equipes técnicas especializadas.",
+      "metodologia": "O usuário envia dados em formatos Excel ou CSV e seleciona análises descritivas, diagnósticas ou preditivas. O sistema processa os dados, gera gráficos, dashboards e indicadores e utiliza um agente de inteligência artificial para produzir interpretações e recomendações em linguagem natural.",
+      "resultados": "A proposta prevê uma interface acessível, exportação de relatórios em PDF, uso individual ou corporativo e integração futura com sistemas externos. A solução está em validação conceitual e desenvolvimento de protótipo, com evolução planejada para um MVP funcional.",
+      "vinculo": "UEMA · Synapse Lab · Laboratório de Engenharia Aplicada · Incubadora MARANDU",
+      "parceiro": null,
+      "financiamento": null,
+      "inicio": null,
+      "stack": [
+        "Python",
+        "Next.js",
+        "Pandas",
+        "NumPy",
+        "Agentes de IA"
+      ],
+      "responsavel": "julio",
+      "colaboradores": [],
+      "repositorio": null,
+      "url": null,
+      "imagem": "projetos/Vizudata.png",
+      "imagem_contida": false,
+      "equipe": [
+        "Júlio César Costa da Silva",
+        "Ana Elisa Oliveira Silva",
+        "Bruno Raphael Andrade Santos",
+        "Carlos Vinícius Rodrigues Amorim",
+        "Luca Maia Marques"
+      ]
+    },
+    {
+      "id": "educacao-financeira",
+      "nome": "Sistema de Educação Financeira no Maranhão",
+      "categoria": "Educação financeira",
+      "status": "planejado",
+      "destaque": "PESQUISA",
+      "descricao": "Sistema para mapear endividamento, vulnerabilidade financeira e indicadores socioeconômicos, transformando dados pesquisados em estatística e aprendizado.",
+      "objetivo": "Desenvolver um sistema de análise de dados sobre educação financeira no Estado do Maranhão, realizando pesquisa em tempo real, avaliando e comparando o nível de conhecimento por meio de um sistema de TRI e adição de dicas para a melhoria do conhecimento na área de educação financeira.",
+      "metodologia": "A pesquisa combina ciclos de desenvolvimento de software com um pipeline de extração, transformação e carga de bases públicas e institucionais. A arquitetura prevê banco de dados relacional, back-end seguro, front-end analítico, dashboards e técnicas descritivas, preditivas e de agrupamento.",
+      "resultados": "Espera-se produzir um protótipo funcional para acompanhar indicadores de endividamento e consumo, apoiar a alocação de recursos em programas de capacitação financeira e monitorar o impacto de políticas implementadas no território maranhense.",
+      "vinculo": "UEMA · Programa Institucional de Bolsas de Iniciação Científica · ODS 4, 8, 9 e 10",
+      "parceiro": null,
+      "financiamento": null,
+      "inicio": null,
+      "stack": [
+        "ETL",
+        "PostgreSQL",
+        "React",
+        "Business Intelligence",
+        "Machine Learning"
+      ],
+      "responsavel": null,
+      "colaboradores": [],
+      "repositorio": null,
+      "url": null,
+      "imagem": "projetos/financeira.png",
+      "imagem_contida": true,
+      "equipe": [
+        "Júlio César Costa da Silva",
+        "Ana Elisa Oliveira Silva",
+        "Bruno Raphael Andrade Santos",
+        "Carlos Vinícius Rodrigues Amorim"
+      ]
+    }
+  ],
+  "pesquisas": [
+    {
+      "id": "analfabetismo",
+      "nome": "Analfabetismo nos Municípios do Maranhão",
+      "categoria": "Análise de dados",
+      "status": "concluida",
+      "etapa": "publicada",
+      "destaque": "SEAD UFMA · 2025",
+      "descricao": "Estudo dos indicadores de analfabetismo entre 1991 e 2022, com visualizações comparativas e dashboard interativo para identificar padrões e diferenças regionais.",
+      "objetivo": "Analisar a evolução das taxas de analfabetismo nos municípios maranhenses e organizar os dados de forma que pesquisadores e gestores possam reconhecer tendências regionais e apoiar a formulação de políticas educacionais.",
+      "metodologia": "Os dados da plataforma IPEADATA foram limpos, organizados e processados em Python com Pandas. Matplotlib e Seaborn foram utilizados nas análises estatísticas e visualizações, enquanto o Streamlit permitiu disponibilizar os resultados em um dashboard interativo.",
+      "resultados_texto": "O estudo evidenciou a redução do analfabetismo no período analisado, além de diferenças relevantes entre municípios. O tratamento dos dados e as visualizações formaram uma base consistente para novas análises e para o acompanhamento de indicadores sociais.",
+      "vinculo": "UEMA · Trabalho apresentado na 18ª Semana Acadêmica de Administração da UFMA",
+      "periodo": "1991–2022",
+      "fontes": [
+        "IPEADATA"
+      ],
+      "stack": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Streamlit"
+      ],
+      "orientador": null,
+      "membros": [
+        "julio",
+        "ana-elisa",
+        "bruno",
+        "carlos"
+      ],
+      "colaboradores": [
+        "Samyra de Araujo Lobo Silva"
+      ],
+      "resultados": [
+        "Premiação de destaque na XVIII Semana de Administração da UFMA (SEAD 2025)"
+      ],
+      "repositorio": null,
+      "pagina": "pesquisa/analfabetismo.md",
+      "imagem": "projetos/sead.jpeg",
+      "imagem_contida": false,
+      "equipe": [
+        "Júlio César Costa da Silva",
+        "Ana Elisa Oliveira Silva",
+        "Bruno Raphael Andrade Santos",
+        "Carlos Vinícius Rodrigues Amorim",
+        "Samyra de Araujo Lobo Silva"
+      ]
+    },
+    {
+      "id": "feminicidio",
+      "nome": "Feminicídio no Maranhão",
+      "categoria": "Segurança pública",
+      "status": "planejada",
+      "etapa": "revisao",
+      "destaque": "PLANEJADA",
+      "descricao": "Análise da evolução dos casos de feminicídio no Maranhão, cruzando dados de segurança pública e de saúde.",
+      "objetivo": null,
+      "metodologia": null,
+      "resultados_texto": null,
+      "vinculo": "UEMA · LEA · NARA",
+      "periodo": null,
+      "fontes": [
+        "SSP-MA",
+        "Anuário Brasileiro de Segurança Pública",
+        "SIM/DataSUS"
+      ],
+      "stack": [
+        "Python",
+        "Pandas",
+        "Streamlit"
+      ],
+      "orientador": null,
+      "membros": [],
+      "colaboradores": [],
+      "resultados": [],
+      "repositorio": null,
+      "pagina": "pesquisa/feminicidio.md",
+      "imagem": null,
+      "imagem_contida": false,
+      "equipe": []
+    }
+  ]
+}
