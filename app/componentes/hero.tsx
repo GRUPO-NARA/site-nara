@@ -1,10 +1,9 @@
-"use client";
-import { irParaSecao } from "../utils/utils";
+import { atraso } from "../lib/estilo";
 
 export default function Hero() {
   return (
-   
-    <main className="flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white group">
+
+    <main id="inicio" className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white group">
       
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
         <svg 
@@ -168,24 +167,33 @@ export default function Hero() {
 
       <section className="flex flex-col gap-10 px-150 py-20 z-10">
         <article className="flex flex-col gap-5">
-          <p className="text-[#ffa928] font-sans text-sm font-semibold">LEA · UEMA · ENGENHARIA DA COMPUTAÇÃO</p>
+          <p className="hero-linha text-[#ffa928] font-sans text-sm font-semibold tracking-wide" style={atraso(0)}>LEA · UEMA · ENGENHARIA DA COMPUTAÇÃO</p>
           <h1 className="text-7xl md:text-9xl text-gray-900 font-sans font-bold">
-            <span className="text-[#ffa928]">N</span>úcleo de<br></br>
-            <span className="text-[#ffa928]">A</span>nálise e<br></br>
-            <span className="text-[#ffa928]">R</span>ecursos <br></br>
-            <span className="text-[#ffa928]">A</span>nalíticos
+            {[["N", "úcleo de"], ["A", "nálise e"], ["R", "ecursos"], ["A", "nalíticos"]].map(([inicial, resto], i) => (
+              <span key={i} className="hero-linha block" style={atraso(120 + i * 110)}>
+                <span className="hero-inicial text-[#ffa928]" style={atraso(1200 + i * 500)}>{inicial}</span>{resto}
+              </span>
+            ))}
           </h1>
-          <p className="text-gray-600 text-xl">Desenvolvemos soluções de software especializadas em ciência de dados, análise preditiva e engenharia de sistemas — integrando pesquisa acadêmica e impacto prático.</p>
+          <p className="hero-linha text-gray-600 text-xl" style={atraso(620)}>Desenvolvemos soluções de software especializadas em ciência de dados, análise preditiva e engenharia de sistemas — integrando pesquisa acadêmica e impacto prático.</p>
         </article>
-        
-        <nav className="flex gap-5 items-center">
+
+        <nav className="hero-linha flex gap-5 items-center" style={atraso(760)}>
           <a
             href="#projetos"
-            className="rounded-sm bg-[#ffa928] p-3 font-sans font-bold text-white transition-colors hover:bg-[#e99820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+            className="group/cta inline-flex items-center gap-2 rounded-sm bg-[#ffa928] p-3 font-sans font-bold text-white shadow-[0_10px_24px_-12px_rgba(255,169,40,0.9)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e99820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
           >
             Ver Projetos
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current transition-transform duration-200 group-hover/cta:translate-x-1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </a>
-          <a className="p-3 font-sans font-bold border border-gray-300 rounded hover:cursor-pointer" onClick={() => irParaSecao('sobre')}>Sobre o NARA</a>
+          <a
+            href="#sobre"
+            className="rounded-sm border border-gray-300 p-3 font-sans font-bold text-gray-900 transition-colors hover:border-[#ffa928] hover:text-[#d88710] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+          >
+            Sobre o NARA
+          </a>
         </nav>
       </section>
       

@@ -7,7 +7,7 @@ const informacoes = [
 export default function Contato(){
     return(
         <main id="contato" className="flex justify-center bg-white py-20 font-sans">
-            <section className="grid w-full max-w-6xl grid-cols-1 gap-16 p-4 md:grid-cols-2 md:gap-20">
+            <section data-revelar className="grid w-full max-w-6xl grid-cols-1 gap-16 p-4 md:grid-cols-2 md:gap-20">
                 <article className="flex flex-col">
                     <div className="flex flex-col gap-3 text-gray-900">
                         <p className="py-2 text-sm font-bold text-[#ffa928] md:py-0">/ CONTATO</p>

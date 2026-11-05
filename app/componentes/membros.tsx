@@ -1,24 +1,25 @@
 import Image from "next/image"
 import { caminhoImagem, type Membro } from "../lib/dados"
+import { atraso } from "../lib/estilo"
 
 export default function Membros({ membros }: { membros: Membro[] }){
     return(
-        <main id="membros" className="flex justify-center bg-[#f8f8f8] py-20 font-sans scroll-mt-8">
+        <main id="membros" className="flex justify-center bg-[#f8f8f8] py-20 font-sans">
             <section className="flex flex-col gap-12 max-w-6xl w-full p-4">
-                <article className="flex flex-col gap-3 text-gray-900">
+                <article data-revelar className="flex flex-col gap-3 text-gray-900">
                     <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ MEMBROS</p>
                     <h1 className="text-5xl md:text-5xl font-bold">Conheça nossa equipe</h1>
                 </article>
 
                 <article className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {
-                        membros.map((membro) => {
+                        membros.map((membro, i) => {
                             const foto = caminhoImagem(membro.foto)
                             return (
-                                <div key={membro.id} className="overflow-hidden rounded-sm border border-gray-200 bg-white">
+                                <div key={membro.id} data-revelar style={atraso((i % 3) * 120)} className="group overflow-hidden rounded-sm border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ffa928] hover:shadow-[0_22px_44px_-24px_rgba(255,169,40,0.85)]">
                                     {
                                         foto ? (
-                                            <Image className="aspect-square w-full object-cover border-b border-gray-300"
+                                            <Image className="aspect-square w-full object-cover border-b border-gray-300 transition-transform duration-700 group-hover:scale-105"
                                                 src={foto}
                                                 width={600}
                                                 height={600}

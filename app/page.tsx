@@ -7,6 +7,7 @@ import Equipe from "./componentes/equipe";
 import Membros from "./componentes/membros";
 import Contato from "./componentes/contato";
 import Footer from "./componentes/footer";
+import Efeitos from "./componentes/efeitos";
 import { buscarDados, resumoProjetos } from "./lib/dados";
 
 export default async function Nara(){
@@ -38,6 +39,7 @@ export default async function Nara(){
       <Membros membros={dados.membros} />
       <Contato />
       <Footer />
+      <Efeitos />
     </>
   )
 }
