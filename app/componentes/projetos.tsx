@@ -1,8 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { caminhoImagem, textoResultados, type Trabalho } from "../lib/dados"
+import { atraso } from "../lib/estilo"
 
 type Props = {
     /** id da seção, usado nos links do menu (#projetos, #pesquisa) */
@@ -51,6 +52,19 @@ export default function Projetos({ id, rotulo, titulo, subtitulo, itens, fundoBr
 
     const aberto = selecionado !== null ? itens[selecionado] : null
 
+    // Painel aberto: fecha com Esc e trava a rolagem da página por trás
+    useEffect(() => {
+        if (selecionado === null) return
+        const anterior = document.body.style.overflow
+        document.body.style.overflow = "hidden"
+        function aoTeclar(e: KeyboardEvent){ if (e.key === "Escape") fecharDetalhes() }
+        document.addEventListener("keydown", aoTeclar)
+        return () => {
+            document.body.style.overflow = anterior
+            document.removeEventListener("keydown", aoTeclar)
+        }
+    }, [selecionado])
+
     function abrirDetalhes(index: number){
         if(temporizadorFechamento.current !== null){
             window.clearTimeout(temporizadorFechamento.current)
@@ -78,7 +92,7 @@ export default function Projetos({ id, rotulo, titulo, subtitulo, itens, fundoBr
     return(
         <main id={id} className={`flex items-center justify-center py-20 font-sans ${fundoBranco ? "bg-white" : "bg-[#f8f8f8]"}`}>
             <section className="w-full max-w-6xl p-4 text-gray-900">
-                <div className="flex flex-col gap-3">
+                <div data-revelar className="flex flex-col gap-3">
                     <p className="py-2 text-sm font-bold text-[#ffa928] md:py-0">{rotulo}</p>
                     <h1 className="text-5xl font-bold md:text-6xl">{titulo}</h1>
                     <p className="max-w-3xl text-lg leading-8 text-gray-600">{subtitulo}</p>
@@ -86,8 +100,8 @@ export default function Projetos({ id, rotulo, titulo, subtitulo, itens, fundoBr
 
                 <article className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {itens.map((item, index) => (
-                        <div key={item.id} className="flex h-full flex-col overflow-hidden rounded-sm border border-gray-200 bg-white">
-                            <div className="relative h-56 overflow-hidden bg-white">
+                        <div key={item.id} data-revelar style={atraso((index % 2) * 140)} className="group flex h-full flex-col overflow-hidden rounded-sm border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ffa928] hover:shadow-[0_22px_44px_-24px_rgba(255,169,40,0.85)]">
+                            <div className="relative h-56 overflow-hidden bg-white transition-transform duration-500 group-hover:scale-[1.04]">
                                 <ImagemCard item={item} tamanho="(min-width: 640px) 50vw, 100vw" margem={["p-4", "p-10"]} />
                             </div>
 
@@ -115,9 +129,12 @@ export default function Projetos({ id, rotulo, titulo, subtitulo, itens, fundoBr
                                 <button
                                     type="button"
                                     onClick={() => abrirDetalhes(index)}
-                                    className="mt-2 w-fit rounded-sm bg-[#ffa928] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-[#e99820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+                                    className="group/btn mt-2 inline-flex w-fit items-center gap-2 rounded-sm bg-[#ffa928] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-[#e99820] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
                                 >
                                     VER DETALHES
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-none stroke-current transition-transform duration-200 group-hover/btn:translate-x-1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M5 12h14M13 6l6 6-6 6" />
+                                    </svg>
                                 </button>
                             </div>
                         </div>

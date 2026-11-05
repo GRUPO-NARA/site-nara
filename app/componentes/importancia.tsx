@@ -1,3 +1,5 @@
+import { atraso } from "../lib/estilo"
+
 export default function Importancia(){
     
     type formatoDasInfos = {
@@ -32,7 +34,7 @@ export default function Importancia(){
     return(
         <main id= "importancia" className="flex justify-center bg-white py-20 font-sans">
             <section className="gap-20 md:gap-50 justify-center items-center max-w-6xl p-4">
-                <article className="flex flex-col items-center text-center gap-7 text-gray-900">
+                <article data-revelar className="flex flex-col items-center text-center gap-7 text-gray-900">
                     <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ IMPORTÂNCIA</p>
                     <h1 className="text-6xl md:text-6xl text-gray-900 font-sans font-bold"> Por que dados importam</h1>
                     <p className= "text-gray-700 text-lg"> Na era da informação, transformar dados brutos em conhecimento acionável é uma competência estratégica. O NARA forma engenheiros preparados para essa demanda. </p>
@@ -40,9 +42,9 @@ export default function Importancia(){
 
                 <article className="mt-16">
                     <section className="grid grid-cols-1 gap-4 text-left sm:grid-cols-2 md:grid-cols-4">
-                        {Object.entries(informacoes).map(([chave, info]) => (
-                            <div key={chave} className="flex flex-col items-left gap-4 border border-b-2 border-b-[#ffa928] border-gray-200 rounded-sm bg-white p-6 mx-1">
-                                <p className="text-xs font-bold text-[#ffa928]">{info.numeracao}</p>
+                        {Object.entries(informacoes).map(([chave, info], i) => (
+                            <div key={chave} data-revelar style={atraso(i * 120)} className="group flex flex-col items-left gap-4 border border-b-2 border-b-[#ffa928] border-gray-200 rounded-sm bg-white p-6 mx-1 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ffa928] hover:shadow-[0_18px_36px_-20px_rgba(255,169,40,0.85)]">
+                                <p className="origin-bottom-left text-xs font-bold text-[#ffa928] transition-transform duration-300 group-hover:scale-[2.2]">{info.numeracao}</p>
                                 <h2 className="text-xl font-bold text-gray-900"> {info.titulo}</h2>
                                 <p className="text-sm leading-relaxed text-gray-500"> {info.informacao}</p>
                             </div>
