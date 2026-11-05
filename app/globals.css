@@ -3,5 +3,12 @@
 
 html {
   scroll-behavior: smooth;
+  /* altura do header fixo, para as âncoras pararem logo abaixo dele */
   scroll-padding-top: 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

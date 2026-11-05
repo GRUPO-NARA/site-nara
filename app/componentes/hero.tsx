@@ -1,10 +1,7 @@
-"use client";
-import { irParaSecao } from "../utils/utils";
-
 export default function Hero() {
   return (
-   
-    <main className="flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white group">
+
+    <main id="inicio" className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white group">
       
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
         <svg 
@@ -185,7 +182,12 @@ export default function Hero() {
           >
             Ver Projetos
           </a>
-          <a className="p-3 font-sans font-bold border border-gray-300 rounded hover:cursor-pointer" onClick={() => irParaSecao('sobre')}>Sobre o NARA</a>
+          <a
+            href="#sobre"
+            className="rounded-sm border border-gray-300 p-3 font-sans font-bold text-gray-900 transition-colors hover:border-[#ffa928] hover:text-[#d88710] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffa928]"
+          >
+            Sobre o NARA
+          </a>
         </nav>
       </section>
       

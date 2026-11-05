@@ -3,7 +3,7 @@ import { caminhoImagem, type Membro } from "../lib/dados"
 
 export default function Membros({ membros }: { membros: Membro[] }){
     return(
-        <main id="membros" className="flex justify-center bg-[#f8f8f8] py-20 font-sans scroll-mt-8">
+        <main id="membros" className="flex justify-center bg-[#f8f8f8] py-20 font-sans">
             <section className="flex flex-col gap-12 max-w-6xl w-full p-4">
                 <article className="flex flex-col gap-3 text-gray-900">
                     <p className="font-bold text-[#ffa928] text-sm py-2 md:py-0">/ MEMBROS</p>
