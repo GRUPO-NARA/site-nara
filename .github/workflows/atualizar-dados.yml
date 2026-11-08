@@ -1,0 +1,58 @@
+# Atualiza a cópia local dos dados do handbook (app/lib/dados-fallback.json).
+#
+# O site lê membros, projetos e pesquisas do handbook. Essa cópia só é usada quando
+# o handbook está fora do ar, mas precisa estar recente. Toda segunda-feira este
+# workflow roda `npm run dados:atualizar` e, se algo mudou, abre (ou atualiza) um PR.
+#
+# Requisito: em Settings → Actions → General, marcar
+# "Allow GitHub Actions to create and approve pull requests".
+name: Atualizar dados do handbook
+
+on:
+  schedule:
+    - cron: "17 11 * * 1" # segunda-feira, 08h17 em Brasília (11h17 UTC)
+  workflow_dispatch: # permite rodar na mão pela aba Actions
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: chore/atualizar-dados-handbook
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # O script só usa fetch e fs do Node, não precisa de npm ci.
+      - name: Baixar dados do handbook
+        run: npm run dados:atualizar
+
+      - name: Abrir ou atualizar o PR, se houver mudança
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- app/lib/dados-fallback.json; then
+            echo "Nada mudou no handbook. Nenhum PR aberto."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$BRANCH"
+          git add app/lib/dados-fallback.json
+          git commit -m "chore: atualiza a cópia local dos dados do handbook"
+          git push --force origin "$BRANCH"
+
+          # Se o PR já existe, o push acima já o atualizou.
+          if [ -z "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            gh pr create --base "${{ github.event.repository.default_branch }}" --head "$BRANCH" \
+              --title "chore: atualiza a cópia local dos dados do handbook" \
+              --body "PR automático do workflow **Atualizar dados do handbook**. Atualiza \`app/lib/dados-fallback.json\` com o conteúdo atual de \`handbook.nucleonara.tech/api/site.json\`. Confira o diff e faça o merge."
+          fi
