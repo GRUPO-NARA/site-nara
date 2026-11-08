@@ -1,0 +1,47 @@
+# Integração contínua do site do NARA.
+#
+# Roda em todo pull request e em todo push na main e na develop:
+# instala as dependências, roda o lint e faz o build (que também confere os tipos) do Next.js.
+# Se algum passo falhar, o PR fica com o ✗ vermelho e o log aparece na aba "Actions".
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+  workflow_dispatch: # permite rodar na mão pela aba Actions
+
+# Se um novo push chegar na mesma branch, cancela a execução anterior.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Lint e build
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # O build também confere os tipos do TypeScript.
+      # O build busca os dados no handbook. Se ele estiver fora do ar,
+      # usa a cópia local (app/lib/dados-fallback.json), então não quebra.
+      - name: Build
+        run: npm run build
